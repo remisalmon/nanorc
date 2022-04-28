@@ -1,0 +1,9 @@
+# Syntax highlighting for CSV files.
+
+syntax csv "\.csv$"
+
+# Comas.
+color brightmagenta ","
+
+# Quoted strings.
+color brightyellow ""([^"]|(\\"))*""
