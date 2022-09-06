@@ -6,4 +6,4 @@ syntax csv "\.csv$"
 color brightmagenta ","
 
 # Quoted strings.
-color brightyellow ""([^"]|\\"|"")*""
+color brightyellow ""([^"]|(\\"))*""
