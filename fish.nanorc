@@ -7,7 +7,7 @@ header "^#!.*/(env +)?fish *$"
 comment "# "
 
 # Keywords.
-color green "\<(if|else|end|for|in|while|break|continue|return|begin|and|or|not|switch|case)\>"
+color green "\<(if|else|end|for|in|while|break|continue|function|return|begin|and|or|not|switch|case)\>"
 color green "[():;|$<>!=]"
 
 # Commands.
