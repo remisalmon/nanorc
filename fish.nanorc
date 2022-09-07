@@ -22,8 +22,8 @@ color brightmagenta "[[:blank:]]--?[[:alnum:]-]+"
 color brightred "\{?\$[[:alnum:]_]+\}?"
 
 # Quoted stings.
-color brightyellow ""([^"]|(\\"))*""
-color brightyellow "'([^']|(\\'))*'"
+color brightyellow ""([^"]|\\")*""
+color brightyellow "'([^']|\\')*'"
 
 # Comments.
 color cyan "(^|[[:blank:]])#.*$"
