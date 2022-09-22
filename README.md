@@ -1,11 +1,20 @@
 # nanorc
 
-Missing nanorc files for nano.
+Extra nanorc files for [nano](https://www.nano-editor.org/) syntax highlighting.
 
 ## Setup
 
-`echo 'include "path/to/*.nanorc"' >> ~/.nanorc`
+`echo "include \"path/to/*.nanorc\"" >> ~/.nanorc`
 
-## Doc
+## Docs
 
-https://www.nano-editor.org/dist/latest/nanorc.5.html
+nano:
+- https://www.nano-editor.org/dist/latest/nanorc.5.html
+
+fish:
+- https://fishshell.com/docs/current/commands.html
+
+Snowflake:
+- https://docs.snowflake.com/en/sql-reference/sql-all.html
+- https://docs.snowflake.com/en/sql-reference/constructs.html
+- https://docs.snowflake.com/en/sql-reference/operators.html
