@@ -1,0 +1,30 @@
+# Syntax highlighting for Snowflake SQL.
+
+syntax snowflake "\.sql$"
+
+comment "-- "
+
+# Snowflake commands.
+icolor blue "\<(ALTER|BEGIN|CALL|COMMENT|COMMIT|COPY INTO|CREATE|DELETE|DESCRIBE|DROP|EXECUTE|EXPLAIN|GET|GRANT|INSERT|LIST|MERGE|PUT|REMOVE|REVOKE|ROLLBACK|SELECT|SET|SHOW|TRUNCATE|UNDROP|UNSET|UPDATE|USE)\>"
+
+# Snowflake constructs.
+icolor blue "\<(WITH|SELECT|TOP|INTO|FROM|AT|BEFORE|CHANGES|CONNECT BY|JOIN|LATERAL|MATCH_RECOGNIZE|PIVOT|UNPIVOT|VALUES|SAMPLE|WHERE|GROUP BY|HAVING|QUALIFY|ORDER BY|LIMIT)\>"
+
+# Snowflake operators.
+icolor blue "\<(AND|NOT|OR|INTERSECT|MINUS|EXCEPT|UNION|EXISTS|ANY|ALL|IN)\>"
+
+# Snowflake functions.
+icolor magenta "([[:alnum:]_]*\(|\))"
+
+# SQL keywords.
+icolor blue "\<(NULL|TRUE|FALSE|DISTINCT|AS|CASE|WHEN|THEN|ELSE|END)\>"
+
+# Strings.
+color green "'([^']|\\')*'"
+
+# Trailing whitespace.
+color ,green "[[:space:]]+$"
+
+# Comments
+color red "(--|//).*"
+color red start="/\*" end="\*/"
