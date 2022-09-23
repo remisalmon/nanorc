@@ -9,15 +9,17 @@ icolor blue "\<(ALTER|BEGIN|CALL|COMMENT|COMMIT|COPY INTO|CREATE|DELETE|DESCRIBE
 
 # Snowflake constructs.
 icolor blue "\<(WITH|SELECT|TOP|INTO|FROM|AT|BEFORE|CHANGES|CONNECT BY|JOIN|LATERAL|MATCH_RECOGNIZE|PIVOT|UNPIVOT|VALUES|SAMPLE|WHERE|GROUP BY|HAVING|QUALIFY|ORDER BY|LIMIT)\>"
+icolor blue "\<(OVER|PARTITION BY)\>"
 
 # Snowflake operators.
 icolor blue "\<(AND|NOT|OR|INTERSECT|MINUS|EXCEPT|UNION|EXISTS|ANY|ALL|IN)\>"
 
 # Snowflake functions.
-icolor magenta "([[:alnum:]_]*\(|\))"
+color magenta "[[:alnum:]_]+\("
+color normal "\("
 
-# SQL keywords.
-icolor blue "\<(NULL|TRUE|FALSE|DISTINCT|AS|CASE|WHEN|THEN|ELSE|END)\>"
+# ANSI SQL keywords.
+icolor blue "\<(ON|NULL|TRUE|FALSE|DISTINCT|AS|CASE|WHEN|THEN|ELSE|END)\>"
 
 # Strings.
 color green "'([^']|\\')*'"

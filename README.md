@@ -18,3 +18,4 @@ Snowflake:
 - https://docs.snowflake.com/en/sql-reference/sql-all.html
 - https://docs.snowflake.com/en/sql-reference/constructs.html
 - https://docs.snowflake.com/en/sql-reference/operators.html
+- https://docs.snowflake.com/en/sql-reference/functions-analytic.html
