@@ -15,7 +15,7 @@ icolor blue "\<(OVER|PARTITION BY)\>"
 icolor blue "\<(AND|NOT|OR|INTERSECT|MINUS|EXCEPT|UNION|EXISTS|ANY|ALL|IN)\>"
 
 # Snowflake functions.
-color magenta "[[:alnum:]_]+\("
+color magenta "\<[[:alnum:]_]+\("
 color normal "\("
 
 # ANSI SQL keywords.
