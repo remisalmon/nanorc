@@ -1,0 +1,37 @@
+# Syntax highlighting for Python.
+
+syntax snowflake "\.py$"
+
+comment "# "
+
+# Built-in Keywords.
+color blue "\<(or|and|not|int|float|complex|list|tuple|range|str|bytes|bytearray|memoryview|set|frozenset|dict|with)\>"
+color blue "\<(assert|pass|del|return|yeld|from|raise|break|continue|import|as|global|nonlocal)\>"
+color blue "\<(if|elif|else|while|for|in|try|except|finally|with|match|case|def|class|async|await)\>"
+
+# Built-in Functions.
+color magenta "\<(abs|aiter|all|any|anext|ascii|bin|bool|breakpoint|bytearray|bytes|callable|chr|classmethod|compile|complex|delattr|dict|dir|divmod|enumerate|eval|exec|filter|float|format|frozenset|getattr|globals|hasattr|hash|help|hex|id|input|int|isinstance|issubclass|iter|len|list|locals|map|max|memoryview|min|next|object|oct|open|ord|pow|print|property|range|repr|reversed|round|set|setattr|slice|sorted|staticmethod|str|sum|super|tuple|type|vars|zip|__import__)\("
+color normal "(\.[[:alnum:]_]+)?\("
+
+# Classes.
+color magenta "\<[[:upper:]]+[[:lower:]]+[[:alnum:]]*\>"
+
+# Built-in Constants.
+color yellow "\<(False|True|None|NotImplemented|Ellipsis)\>"
+
+# Numbers.
+color yellow "\<[[:digit:]]+[[:digit:]._]*\>"
+
+# Strings.
+color green ""([^"]|\\")*""
+color green "'([^']|\\')*'"
+
+# Multiline strings.
+color green start=""""([^"]*|$)" end="(^|[^"]*)""""
+color green start="'''([^']*|$)" end="(^|[^']*)'''"
+
+# Trailing whitespace.
+color ,green "[[:space:]]+$"
+
+# Comments.
+color red "(^|[[:blank:]])#.*"
