@@ -3,7 +3,7 @@
 syntax csv "\.csv$"
 
 # Comas.
-color brightmagenta ","
+color magenta ","
 
 # Quoted strings.
-color brightyellow ""([^"]|\\")*""
+color green ""([^"]|\\")*""

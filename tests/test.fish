@@ -1,13 +1,9 @@
 #!/usr/bin/env fish
 
-set -g TEXT "hello world" # string
+set -g TEXT "hello world" # comment
 
 function hi
-    echo $TEXT
+    echo {$TEXT}
 end
 
-if test (hi) = {$TEXT}
-    exit 0
-else
-    exit 1
-end
+hi
