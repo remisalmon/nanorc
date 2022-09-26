@@ -1,0 +1,23 @@
+# Syntax highlighting for LookML.
+
+syntax snowflake "\.l(oo)?kml$"
+
+comment "# "
+
+# Keywords.
+color blue "\<[[:alnum:]_]+:"
+
+# Strings.
+color green ""([^"]|\\")*""
+color green "'([^']|\\')*'"
+
+# SQL.
+color magenta start="\<sql[[:alnum:]_]*:" end=";;"
+color blue "\<sql[[:alnum:]_]*:"
+color normal ":"
+
+# Trailing whitespace.
+color ,green "[[:space:]]+$"
+
+# Comments
+color red "(^|[[:blank:]])#.*"
