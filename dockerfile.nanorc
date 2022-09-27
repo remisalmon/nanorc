@@ -1,0 +1,21 @@
+# Syntax highlighting for Dockerfile.
+
+syntax dockerfile "Dockerfile$"
+
+comment "# "
+
+# Keywords.
+color blue "^[[:upper:]]+[[:space:]]"
+
+# Environment variables.
+color magenta "\$[[:alnum:]_]+"
+color magenta "\$\{[[:alnum:]_]+(:[+-][[:alnum:]_]*)?\}"
+
+# Strings.
+color green ""([^"]|\\")*""
+
+# Trailing whitespace.
+color ,green "[[:space:]]+$"
+
+# Comments.
+color red "(^|[[:blank:]])#.*"
