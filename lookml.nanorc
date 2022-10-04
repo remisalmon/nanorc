@@ -5,7 +5,7 @@ syntax snowflake "\.l(oo)?kml$"
 comment "# "
 
 # Keywords.
-color blue "\<[[:alnum:]_]+:"
+color blue "^[[:blank:]]*[[:alnum:]_]+:"
 
 # Strings.
 color green ""([^"]|\\")*""
@@ -16,8 +16,8 @@ color magenta start="\<sql[[:alnum:]_]*:" end=";;"
 color blue "\<sql[[:alnum:]_]*:"
 color normal ":"
 
+# Comments.
+color red "(^|[[:blank:]])#.*"
+
 # Trailing whitespace.
 color ,green "[[:space:]]+$"
-
-# Comments
-color red "(^|[[:blank:]])#.*"

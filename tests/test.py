@@ -1,7 +1,8 @@
-def function(*args, **kwargs):
+def main(*args, **kwargs):
     for _ in range(1):
-        print("""hello""")
+        print("""hello""") # comment
 
     return None
 
-function() # comment
+if __name__ == '__main__':
+  main() 

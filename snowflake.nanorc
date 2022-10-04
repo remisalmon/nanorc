@@ -24,9 +24,9 @@ icolor blue "\<(ON|NULL|TRUE|FALSE|DISTINCT|AS|CASE|WHEN|THEN|ELSE|END)\>"
 # Strings.
 color green "'([^']|\\')*'"
 
-# Trailing whitespace.
-color ,green "[[:space:]]+$"
-
 # Comments
 color red "(--|//).*"
 color red start="/\*" end="\*/"
+
+# Trailing whitespace.
+color ,green "[[:space:]]+$"

@@ -30,8 +30,8 @@ color green "'([^']|\\')*'"
 color green start=""""([^"]*|$)" end="(^|[^"]*)""""
 color green start="'''([^']*|$)" end="(^|[^']*)'''"
 
-# Trailing whitespace.
-color ,green "[[:space:]]+$"
-
 # Comments.
 color red "(^|[[:blank:]])#.*"
+
+# Trailing whitespace.
+color ,green "[[:space:]]+$"

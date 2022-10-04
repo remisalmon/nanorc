@@ -13,7 +13,7 @@ color blue "[():;|$<>!=]"
 # Commands.
 color magenta "\<(command|builtin|time|exec)\>"
 color magenta "\<(cd|echo|printf|set|read|string|math|argparse|count|type|test|contains|abbr|eval|source|set_color|status|bind|commandline|random)\>"
-color magenta "\<(fish|prompt)_[[:alnum:]_]+\>"
+color magenta "\<(fish|prompt)_[[:alpha:]_]+\>"
 color magenta "\<alias\>"
 
 # Options.
@@ -27,7 +27,7 @@ color green ""([^"]|\\")*""
 color green "'([^']|\\')*'"
 
 # Comments.
-color red "(^|[[:blank:]])#.*$"
+color red "(^|[[:blank:]])#.*"
 
 # Trailing whilespaces.
 color ,green "[[:space:]]+$"
