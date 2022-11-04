@@ -9,23 +9,24 @@ icolor blue "\<(ALTER|BEGIN|CALL|COMMENT|COMMIT|COPY INTO|CREATE|DELETE|DESCRIBE
 
 # Snowflake constructs.
 icolor blue "\<(WITH|SELECT|TOP|INTO|FROM|AT|BEFORE|CHANGES|CONNECT BY|JOIN|LATERAL|MATCH_RECOGNIZE|PIVOT|UNPIVOT|VALUES|SAMPLE|WHERE|GROUP BY|HAVING|QUALIFY|ORDER BY|LIMIT)\>"
-icolor blue "\<(OVER|PARTITION BY)\>"
+icolor blue "\<(ALL|DISTINCT|AS|INNER|LEFT|RIGHT|FULL|OUTER|NATURAL|CROSS|ON|USING|FOR|IN|OVER|PARTITION BY)\>"
 
 # Snowflake operators.
 icolor blue "\<(AND|NOT|OR|INTERSECT|MINUS|EXCEPT|UNION|EXISTS|ANY|ALL|IN)\>"
 
 # Snowflake functions.
 color magenta "\<[[:alnum:]_]+\("
-color normal "\("
+color normal "(\.[[:alnum:]_]+)?\("
+color magenta "(::|\|\|)"
 
 # ANSI SQL keywords.
-icolor blue "\<(ON|NULL|TRUE|FALSE|DISTINCT|AS|CASE|WHEN|THEN|ELSE|END)\>"
+icolor blue "\<(NULL|TRUE|FALSE|CASE|WHEN|THEN|ELSE|END)\>"
 
 # Strings.
 color green "'([^']|\\')*'"
 
 # Comments
-color red "(--|//).*"
+color red "--.*"
 color red start="/\*" end="\*/"
 
 # Trailing whitespace.

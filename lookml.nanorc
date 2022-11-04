@@ -1,20 +1,25 @@
 # Syntax highlighting for LookML.
 
-syntax snowflake "\.l(oo)?kml$"
+syntax lookml "\.l(oo)?kml$"
 
 comment "# "
 
 # Keywords.
-color blue "^[[:blank:]]*[[:alnum:]_]+:"
+color blue "^[[:blank:]]*(-[[:blank:]]?)?[[:alnum:]_]+:"
+
+# Variables.
+color magenta "\$\{[[:alnum:]_.]*\}"
+
+# Numbers and constants.
+color yellow "\<[[:digit:]]+(\.[[:digit:]]*)?(e[+-]?[[:digit:]]+)?\>"
+color yellow "\<(yes|no)\>"
+
+# SQL.
+color red ";;"
 
 # Strings.
 color green ""([^"]|\\")*""
 color green "'([^']|\\')*'"
-
-# SQL.
-color magenta start="\<sql[[:alnum:]_]*:" end=";;"
-color blue "\<sql[[:alnum:]_]*:"
-color normal ":"
 
 # Comments.
 color red "(^|[[:blank:]])#.*"
