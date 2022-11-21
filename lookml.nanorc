@@ -5,13 +5,13 @@ syntax lookml "\.l(oo)?kml$"
 comment "# "
 
 # Keywords.
-color blue "^[[:blank:]]*(-[[:blank:]]?)?[[:alnum:]_]+:"
+icolor blue "^ *(- ?)?[0-9a-z_]+:"
 
 # Variables.
-color magenta "\$\{[[:alnum:]_.]*\}"
+icolor magenta "\$\{[0-9a-z_.]*\}"
 
 # Numbers and constants.
-color yellow "\<[[:digit:]]+(\.[[:digit:]]*)?(e[+-]?[[:digit:]]+)?\>"
+color yellow "\<[0-9]+(\.[0-9]*)?(e[+-]?[0-9]+)?\>"
 color yellow "\<(yes|no)\>"
 
 # SQL.
@@ -22,7 +22,7 @@ color green ""([^"]|\\")*""
 color green "'([^']|\\')*'"
 
 # Comments.
-color red "(^|[[:blank:]])#.*"
+color red "(^| )#.*"
 
-# Trailing whitespace.
-color ,green "[[:space:]]+$"
+# Trailing whitespaces.
+color ,green " +$"

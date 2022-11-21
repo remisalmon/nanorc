@@ -8,26 +8,29 @@ comment "# "
 
 # Keywords.
 color blue "\<(if|else|end|for|in|while|break|continue|function|return|begin|and|or|not|switch|case)\>"
-color blue "[():;|$<>!=]"
+
+# Parameter expansion.
+color blue "[][(){}*~]"
+color normal "[][~]{2,}"
 
 # Commands.
 color magenta "\<(command|builtin|time|exec)\>"
 color magenta "\<(cd|echo|printf|set|read|string|math|argparse|count|type|test|contains|abbr|eval|source|set_color|status|bind|commandline|random)\>"
-color magenta "\<(fish|prompt)_[[:alpha:]_]+\>"
+color magenta "\<(fish|prompt)_[a-z_]+\>"
 color magenta "\<alias\>"
 
-# Options.
-color magenta "[[:blank:]]--?[[:alnum:]-]+=?"
-
-# Variable names.
-color yellow "\{?\$[[:alnum:]_]+\}?"
+# Command options.
+icolor magenta " --?[0-9a-z-]+=?"
 
 # Strings.
 color green ""([^"]|\\")*""
 color green "'([^']|\\')*'"
 
-# Comments.
-color red "(^|[[:blank:]])#.*"
+# Variable names.
+icolor yellow "\{?\$[0-9a-z_]+\}?"
 
-# Trailing whilespaces.
-color ,green "[[:space:]]+$"
+# Comments.
+color red "(^| )#.*"
+
+# Trailing whitespaces.
+color ,green " +$"

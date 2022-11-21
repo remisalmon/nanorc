@@ -8,5 +8,5 @@ color magenta ","
 # Quoted strings.
 color green ""([^"]|\\")*""
 
-# Trailing whilespaces.
-color ,green "[[:space:]]+$"
+# Trailing whitespaces.
+color ,green " +$"

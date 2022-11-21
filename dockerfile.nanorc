@@ -5,17 +5,17 @@ syntax dockerfile "Dockerfile$"
 comment "# "
 
 # Keywords.
-color blue "^[[:upper:]]+[[:blank:]]"
+color blue "^[A-Z]+ "
 
 # Environment variables.
-color magenta "\$[[:alnum:]_]+"
-color magenta "\$\{[[:alnum:]_]+(:[+-][[:alnum:]_]*)?\}"
+icolor yellow "\$[0-9a-z_]+"
+icolor yellow "\$\{[0-9a-z_]+(:[+-][0-9a-z_]*)?\}"
 
 # Strings.
 color green ""([^"]|\\")*""
 
 # Comments.
-color red "(^|[[:blank:]])#.*"
+color red "^ *#.*"
 
-# Trailing whitespace.
-color ,green "[[:space:]]+$"
+# Trailing whitespaces.
+color ,green " +$"

@@ -15,8 +15,8 @@ icolor blue "\<(ALL|DISTINCT|AS|INNER|LEFT|RIGHT|FULL|OUTER|NATURAL|CROSS|ON|USI
 icolor blue "\<(AND|NOT|OR|INTERSECT|MINUS|EXCEPT|UNION|EXISTS|ANY|ALL|IN)\>"
 
 # Snowflake functions.
-color magenta "\<[[:alnum:]_]+\("
-color normal "(\.[[:alnum:]_]+)?\("
+icolor magenta "\<[0-9a-z_]+\("
+icolor normal "(\.[0-9a-z_]+)?\("
 color magenta "(::|\|\|)"
 
 # ANSI SQL keywords.
@@ -29,5 +29,5 @@ color green "'([^']|\\')*'"
 color red "--.*"
 color red start="/\*" end="\*/"
 
-# Trailing whitespace.
-color ,green "[[:space:]]+$"
+# Trailing whitespaces.
+color ,green " +$"
