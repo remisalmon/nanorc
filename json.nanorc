@@ -1,0 +1,19 @@
+# Syntax highlighting for JSON.
+
+syntax json "\.json$"
+
+# Numbers and constants.
+color yellow "-?[0-9]+(\.[0-9]+)?(e[+-]?[0-9]+)?"
+color yellow "\<(null|true|false)\>"
+
+# Strings.
+color green ""([^"]|\\")*""
+
+# Keys.
+color magenta ""[^"]+"[ ]*:"
+
+# Symbols.
+color blue "[][{},:]"
+
+# Trailing whitespaces.
+color ,green " +$"

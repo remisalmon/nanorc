@@ -1,0 +1,22 @@
+# Syntax highlighting for XML.
+
+syntax yaml "\.xml$"
+
+header "<?xml version=.*\?>"
+
+comment "<!--|-->"
+
+# Elements.
+color blue "(<[^> ]+|/?>)"
+
+# Attributes.
+color magenta " [^<=]+="
+
+# Strings.
+color green ""([^"]|\\")*""
+
+# Comments.
+color red start="<!--" end="-->"
+
+# Trailing whitespaces.
+color ,green " +$"
