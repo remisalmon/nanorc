@@ -5,7 +5,7 @@ syntax dockerfile "Dockerfile$"
 comment "# "
 
 # Keywords.
-color blue "^[A-Z]+ "
+color blue "^[A-Z]{3,} "
 
 # Environment variables.
 icolor yellow "\$[0-9a-z_]+"

@@ -4,9 +4,6 @@ syntax lookml "\.l(oo)?kml$"
 
 comment "# "
 
-# Keywords.
-icolor blue "^ *(- ?)?[0-9a-z_]+:"
-
 # Variables.
 icolor magenta "\$\{[0-9a-z_.]*\}"
 
@@ -20,6 +17,12 @@ color red ";;"
 # Strings.
 color green ""([^"]|\\")*""
 color green "'([^']|\\')*'"
+
+# Multiline strings.
+color green start="(^|: *)"" end=""$"
+
+# Keywords.
+icolor blue "^ *(- +)?[0-9a-z_]+:"
 
 # Comments.
 color red "(^| )#.*"

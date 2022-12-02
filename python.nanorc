@@ -26,9 +26,6 @@ color yellow "\<(False|True|None|NotImplemented|Ellipsis)\>"
 # Numbers.
 color yellow "\<[0-9]+(_[0-9])*(\.[0-9]*(_[0-9])*)?(e[+-]?[0-9]+)?\>"
 
-# Comments.
-color red "#.*"
-
 # Strings.
 color green ""([^"]|\\")*""
 color green "'([^']|\\')*'"
@@ -36,6 +33,9 @@ color green "'([^']|\\')*'"
 # Multiline strings.
 color green start=""""([^"]?|$)" end="(^|[^"]?)""""
 color green start="'''([^']?|$)" end="(^|[^']?)'''"
+
+# Comments.
+color red "#.*"
 
 # Trailing whitespaces.
 color ,green " +$"
