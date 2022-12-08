@@ -2,7 +2,7 @@
 
 syntax yaml "\.xml$"
 
-header "<?xml version=.*\?>"
+header "<\?xml.*\?>"
 
 comment "<!--|-->"
 

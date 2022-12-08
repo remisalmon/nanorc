@@ -10,10 +10,12 @@ color yellow "\<(null|true|false)\>"
 color green ""([^"]|\\")*""
 
 # Keys.
-color magenta ""[^"]+"[ ]*:"
+color magenta ""[^"\]+":"
 
 # Symbols.
-color blue "[][{},:]"
+color blue "(:|,)( |$)"
+color blue "(^| |\[)(\{|\[)"
+color blue "(\}|\])(,|\}|\]|$)"
 
 # Trailing whitespaces.
 color ,green " +$"
