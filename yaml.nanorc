@@ -1,0 +1,35 @@
+# Syntax highlighting for YAML.
+
+syntax yaml "\.ya?ml$"
+
+header "^YAML 1\.[0-9.]+ *$"
+
+comment "# "
+
+# Headers.
+color red "^YAML 1\.[0-9.]+ *$"
+
+# Separators.
+color blue "^---( |$)"
+
+# Keywords.
+icolor blue "^ *(- )?[0-9a-z_]+[0-9a-z_-]*:"
+color normal ":"
+
+# Lists.
+color blue "^ *- "
+color blue "(^| )\["
+color blue "\]$"
+
+# Constants.
+color yellow "\<(null|true|false)\>"
+
+# Strings.
+color green ""([^"]|\\")*""
+color green "'([^']|\\')*'"
+
+# Comments.
+color red "(^| )#.*"
+
+# Trailing whitespaces.
+color ,green " +$"

@@ -1,0 +1,42 @@
+# Syntax highlighting for Markdown.
+
+syntax markdown "\.md$"
+
+comment "<!--|-->"
+
+# Headers.
+color blue "^#+ .+$"
+color blue "^(=+|-+)$"
+
+# Lists.
+color blue "^ *[*+-] "
+color blue "^ *[0-9]+\. "
+
+# Horizontal Rules
+color blue "^((\* ?){3,}|(- ?){3,})$"
+
+# Links and Images.
+color magenta "!?\[[^]]+\]"
+
+# Emphasis.
+color magenta "\*\*?[^*` ][^*`]*\*\*?"
+color magenta "__?[^_` ][^_`]*__?"
+
+# Blockquotes.
+color yellow "^ *>.*"
+
+# Code Blocks.
+#color yellow " {4,}.*"
+color yellow start="```" end="```"
+
+# Code.
+color yellow "`[^`]+`"
+
+# HTML.
+color yellow "<[^>]+>"
+
+# Comments.
+color red start="<!--" end="-->"
+
+# Trailing whitespaces.
+color ,green " +$"
