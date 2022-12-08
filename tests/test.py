@@ -1,8 +1,25 @@
-def main(*args, **kwargs):
-    for _ in range(1):
-        print("""hello""") # comment
+def test():
 
-    return None
+class Test:
 
-if __name__ == '__main__':
-  main() 
+False
+
+1_0.0_0e+1
+
+# Comment
+
+test"String"test
+
+test'String'test
+
+test"""String"""test
+
+test"""
+String
+"""test
+
+test'''String'''test
+
+test'''
+String
+'''test

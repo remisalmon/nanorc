@@ -1,9 +1,24 @@
 #!/usr/bin/env fish
 
-set -gx TEXT "hello world" # comment
+Test[0]
 
-function hi
-    echo {$TEXT}
-end
+(Test)
 
-hi 
+Test{s,}
+
+~/Test
+
+Test *
+Test**
+
+Command --options=
+
+"String"
+
+'String'
+
+Variable=$TEST
+
+Variable={$TEST}
+
+# Comment

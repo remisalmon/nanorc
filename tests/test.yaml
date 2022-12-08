@@ -1,0 +1,16 @@
+YAML 1.2
+---
+
+Keyword:
+
+- List
+
+[List,]
+
+null
+
+"String"
+
+'String'
+
+# Comment
