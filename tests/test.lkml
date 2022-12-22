@@ -1,22 +1,28 @@
-Keyword:
+keyword: test
 
-  - Keyword:
+  - keyword: test
 
-test${Variable}test
+test ${variable} test
 
-1.e+1
+test 1.e+1 test
 
-SQL: TEST ;;
+test "string" test
 
-test"String"test
+test 'string' test
 
-test'String'test
-
-test: "
-Multiline strings
+test
+"
+multiline string
 "
 test
 
-# Comment
+test: "
+multiline string
+"
+test
 
-test # Comment
+sql: "test".test ;;
+
+# comment
+
+test # comment

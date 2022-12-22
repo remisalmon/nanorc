@@ -1,24 +1,30 @@
 #!/usr/bin/env fish
 
-Test[0]
+Test if Test
 
-(Test)
+Parameter expansion[0] Test
 
-Test{s,}
+Test (Parameter expansion) Test
 
-~/Test
+Parameter expansion{s,} Test
 
-Test *
-Test**
+Test ~/Parameter expansion
 
-Command --options=
+Parameter expansion * Test
+Parameter expansion** Test
 
-"String"
+Test cd Command
 
-'String'
+Command options --options=Test
 
-Variable=$TEST
+Test "string" Test
 
-Variable={$TEST}
+Test 'string' Test
 
-# Comment
+Test $variable Test
+
+Test {$variable} Test
+
+# comment
+
+Test # comment

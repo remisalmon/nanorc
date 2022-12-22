@@ -1,5 +1,9 @@
-<Element/>
+<element>test</element>
 
-<Element Attribute="String">
+<element/>
 
-<!--Comment-->
+<element attribute="test"/>
+
+<element>"string"</element>
+
+<!--comment-->

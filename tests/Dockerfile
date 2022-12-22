@@ -1,9 +1,9 @@
-FROM Keyword
+KEYWORD test
 
-ENV Variable=$TEST
+test $variable test
 
-ENV Variable=${TEST:-}
+test ${variable:-} test
 
-LABEL "String"
+test "string" test
 
-# Comment
+# comment

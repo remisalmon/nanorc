@@ -1,17 +1,21 @@
-select test
+test select test
 
-from test
+test coalesce() test
 
-join test
+test::test
 
-and test
+test || test
 
-coalesce()
+test null test
 
-test::type
+test 'string' test
 
-null test
+-- comment
 
-'String'
+test--comment
 
--- Comment
+test
+/*
+comment
+*/
+test

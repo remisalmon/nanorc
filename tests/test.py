@@ -1,25 +1,43 @@
+test abs() test
+
 def test():
 
 class Test:
 
-False
+test or test
 
-1_0.0_0e+1
+test False test
 
-# Comment
+test 1_0.0_0e+1 test
 
-test"String"test
+test "string" test
 
-test'String'test
+test 'string' test
 
-test"""String"""test
+test """multiline string""" test
 
-test"""
-String
-"""test
+test """
+multiline tring
+""" test
 
-test'''String'''test
+test
+"""
+multiline tring
+"""
+test
 
-test'''
-String
-'''test
+test '''multiline string''' test
+
+test '''
+multiline tring
+''' test
+
+test
+'''
+multiline tring
+'''
+test
+
+# comment
+
+test#comment

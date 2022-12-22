@@ -1,16 +1,20 @@
 YAML 1.2
 ---
 
-Keyword:
+keyword: test
 
-- List
+- keyword: test
 
-[List,]
+  - list
 
-null
+test [list,]
 
-"String"
+test null test
 
-'String'
+test "string" test
 
-# Comment
+test 'string' test
+
+# comment
+
+test # comment
