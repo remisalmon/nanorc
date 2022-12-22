@@ -11,18 +11,19 @@ icolor magenta "\$\{[0-9a-z_.]*\}"
 color yellow "\<[0-9]+(\.[0-9]*)?(e[+-]?[0-9]+)?\>"
 color yellow "\<(yes|no)\>"
 
-# SQL.
-color red ";;"
+# Multiline strings.
+color green start="^( *[0-9a-z_]+: *)?"" end=""(\.| *$)"
+color normal ""\."
 
 # Strings.
 color green ""([^"]|\\")*""
 color green "'([^']|\\')*'"
 
-# Multiline strings.
-color green start="(^|: *)"" end=""$"
-
 # Keywords.
 icolor blue "^ *(- +)?[0-9a-z_]+:"
+
+# SQL.
+color red ";;"
 
 # Comments.
 color red "(^| )#.*"
