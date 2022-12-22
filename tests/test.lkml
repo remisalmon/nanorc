@@ -21,6 +21,8 @@ multiline string
 "
 test
 
+sql: test ;;
+
 sql: "test".test ;;
 
 # comment
