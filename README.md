@@ -15,7 +15,17 @@ New and improved nanorc files for [nano](https://www.nano-editor.org/) syntax hi
 - comments: `red`
 - trailing whitespaces: `,green`
 
+## Bugs
+
+Bugs are documented in the tests: `git grep "bug"`
+
 ## Docs
+
+### nano
+
+https://www.nano-editor.org/dist/latest/nanorc.5.html
+
+### Languages
 
 Bash:
 - https://www.gnu.org/software/bash/manual/bash.html
@@ -34,9 +44,6 @@ LookML:
 
 Markdown:
 - https://daringfireball.net/projects/markdown/syntax
-
-nano:
-- https://www.nano-editor.org/dist/latest/nanorc.5.html
 
 Python:
 - https://docs.python.org/3/library/index.html
