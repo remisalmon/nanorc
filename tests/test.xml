@@ -1,9 +1,11 @@
+<?xml header?>
+
 <element>test</element>
 
 <element/>
 
-<element attribute="test"/>
+<test attribute=test>
 
-<element>"string"</element>
+test "string" test
 
 <!--comment-->

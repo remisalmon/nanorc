@@ -35,7 +35,8 @@ color green start=""""([^"]?|$)" end="(^|[^"]?)""""
 color green start="'''([^']?|$)" end="(^|[^']?)'''"
 
 # Comments.
-color red "#.*"
+color red "^ *#.*"
+color red "#[^"']*$"
 
 # Trailing whitespaces.
 color ,green " +$"

@@ -22,7 +22,7 @@ multiline tring
 
 test
 """
-multiline tring
+multiline string
 """
 test
 
@@ -40,4 +40,6 @@ test
 
 # comment
 
-test#comment
+test # comment
+
+bug # comment "string"

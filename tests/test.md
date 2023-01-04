@@ -26,16 +26,16 @@ test **emphasis** test
 test _emphasis_ test
 test __emphasis__ test
 
-test
 > blockquote
-  > blockquote
+blockquote
+
 test
+    code block
 
 test
 ```
 code block
 ```
-test
 
 test `code` test
 

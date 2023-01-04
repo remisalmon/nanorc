@@ -1,13 +1,30 @@
 YAML 1.2
+
 ---
 
-keyword: test
+...
 
-- keyword: test
+map: test
 
-  - list
+map:
+  test
 
-test [list,]
+- map: test
+
+- map:
+  test
+
+{map: test}
+
+test: {map: test}
+
+- {map: test}
+
+- list
+
+[list]
+
+test: [list]
 
 test null test
 

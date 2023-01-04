@@ -11,18 +11,21 @@ color red "^YAML 1\.[0-9.]+ *$"
 
 # Separators.
 color blue "^---( |$)"
+color blue "^\.\.\.( |$)"
 
-# Keywords.
-icolor blue "^ *(- )?[0-9a-z_]+[0-9a-z_-]*:"
-color normal ":"
+# Maps.
+icolor blue "^ *(- )?[0-9a-z_]+[0-9a-z_-]*:( |$)"
+icolor blue "(^ *|[:-] )\{[0-9a-z_]+[0-9a-z_-]*: "
+color normal "\{"
 
 # Lists.
 color blue "^ *- "
-color blue "(^| )\["
+color blue "(^ *|[:-] )\["
 color blue "\]$"
+color normal ":"
 
 # Constants.
-color yellow "\<(null|true|false)\>"
+icolor yellow "\<(null|true|false)\>"
 
 # Strings.
 color green ""([^"]|\\")*""
