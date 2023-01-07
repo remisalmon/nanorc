@@ -4,21 +4,21 @@ syntax python "\.py$"
 
 comment "# "
 
+# Built-in Keywords.
+color blue "\<(or|and|not|is|int|float|complex|list|tuple|range|str|bytes|bytearray|memoryview|set|frozenset|dict|with)\>"
+color blue "\<(assert|pass|del|return|yield|from|raise|break|continue|import|as|global|nonlocal)\>"
+color blue "\<(if|elif|else|while|for|in|try|except|finally|with|match|case|def|class|async|await)\>"
+
 # Built-in Functions.
 color magenta "\<(abs|aiter|all|any|anext|ascii|bin|bool|breakpoint|bytearray|bytes|callable|chr|classmethod|compile|complex|delattr|dict|dir|divmod|enumerate|eval|exec|filter|float|format|frozenset|getattr|globals|hasattr|hash|help|hex|id|input|int|isinstance|issubclass|iter|len|list|locals|map|max|memoryview|min|next|object|oct|open|ord|pow|print|property|range|repr|reversed|round|set|setattr|slice|sorted|staticmethod|str|sum|super|tuple|type|vars|zip|__import__)\("
 
 # Functions.
-color magenta "\<def [a-z][0-9a-z_]*\("
+color magenta "\<def [a-z_][0-9a-z_]*\("
 color normal "(\.[a-z_]+)?\("
 
 # Classes.
-color magenta "\<class [A-Z][0-9A-Za-z]*:"
-color normal ":"
-
-# Built-in Keywords.
-color blue "\<(or|and|not|int|float|complex|list|tuple|range|str|bytes|bytearray|memoryview|set|frozenset|dict|with)\>"
-color blue "\<(assert|pass|del|return|yeld|from|raise|break|continue|import|as|global|nonlocal)\>"
-color blue "\<(if|elif|else|while|for|in|try|except|finally|with|match|case|def|class|async|await)\>"
+color magenta "\<class [A-Z][0-9A-Za-z]*"
+color blue "\<(def|class)\>"
 
 # Built-in Constants.
 color yellow "\<(False|True|None|NotImplemented|Ellipsis)\>"
@@ -30,13 +30,13 @@ color yellow "\<[0-9]+(_[0-9])*(\.[0-9]*(_[0-9])*)?(e[+-]?[0-9]+)?\>"
 color green ""([^"]|\\")*""
 color green "'([^']|\\')*'"
 
-# Multiline strings.
-color green start=""""([^"]?|$)" end="(^|[^"]?)""""
-color green start="'''([^']?|$)" end="(^|[^']?)'''"
-
 # Comments.
 color red "^ *#.*"
 color red "#[^"']*$"
+
+# Multiline strings.
+color green start=""""([^"]?|$)" end="(^|[^"]?)""""
+color green start="'''([^']?|$)" end="(^|[^']?)'''"
 
 # Trailing whitespaces.
 color ,green " +$"

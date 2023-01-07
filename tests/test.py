@@ -1,10 +1,16 @@
-test abs() test
+test int test
+
+test int() test
+
+test test.int() test
 
 def test():
 
+def __test__():
+
 class Test:
 
-test or test
+class Test(Test):
 
 test False test
 
@@ -17,7 +23,7 @@ test 'string' test
 test """multiline string""" test
 
 test """
-multiline tring
+multiline string
 """ test
 
 test
@@ -29,17 +35,25 @@ test
 test '''multiline string''' test
 
 test '''
-multiline tring
+multiline string
 ''' test
 
 test
 '''
-multiline tring
+multiline string
 '''
 test
 
 # comment
 
 test # comment
+
+test "string # not a comment" test
+
+test """
+multiline string
+# not a comment
+"""
+test
 
 bug # comment "string"
