@@ -28,8 +28,8 @@ color normal ":"
 icolor yellow "\<(null|true|false)\>"
 
 # Strings.
-color green ""([^"]|\\")*""
-color green "'([^']|\\')*'"
+color green ""([^"\]|\\.)*""
+color green "'([^'\]|\\.)*'"
 
 # Comments.
 color red "(^| )#.*"

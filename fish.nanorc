@@ -23,8 +23,8 @@ color magenta "\<alias\>"
 icolor magenta " --?[0-9a-z-]+=?"
 
 # Strings.
-color green ""([^"]|\\")*""
-color green "'([^']|\\')*'"
+color green ""([^"\]|\\.)*""
+color green "'([^'\]|\\.)*'"
 
 # Variable names.
 icolor yellow "\{?\$[0-9a-z_]+\}?"

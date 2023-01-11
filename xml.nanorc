@@ -13,7 +13,7 @@ color blue "(<[^> ]+|/?>)"
 color magenta " [^<=]+="
 
 # Strings.
-color green ""([^"]|\\")*""
+color green ""([^"\]|\\.)*""
 
 # Headers.
 color red "^<\?xml.*\?> *$"

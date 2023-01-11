@@ -23,7 +23,7 @@ color magenta "(::|\|\|)"
 icolor blue "\<(NULL|TRUE|FALSE|CASE|WHEN|THEN|ELSE|END)\>"
 
 # Strings.
-color green "'([^']|\\')*'"
+color green "'([^'\]|\\.)*'"
 
 # Comments
 color red "--.*"

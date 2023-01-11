@@ -12,7 +12,7 @@ icolor yellow "\$[0-9a-z_]+"
 icolor yellow "\$\{[0-9a-z_]+(:[+-][0-9a-z_]*)?\}"
 
 # Strings.
-color green ""([^"]|\\")*""
+color green ""([^"\]|\\.)*""
 
 # Comments.
 color red "^ *#.*"

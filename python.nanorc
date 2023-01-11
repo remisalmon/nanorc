@@ -27,8 +27,8 @@ color yellow "\<(False|True|None|NotImplemented|Ellipsis)\>"
 color yellow "\<[0-9]+(_[0-9])*(\.[0-9]*(_[0-9])*)?(e[+-]?[0-9]+)?\>"
 
 # Strings.
-color green ""([^"]|\\")*""
-color green "'([^']|\\')*'"
+color green ""([^"\]|\\.)*""
+color green "'([^'\]|\\.)*'"
 
 # Comments.
 color red "^ *#.*"

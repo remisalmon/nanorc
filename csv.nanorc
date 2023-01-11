@@ -5,8 +5,8 @@ syntax csv "\.csv$"
 # Comas.
 color magenta ","
 
-# Quoted strings.
-color green ""([^"]|\\")*""
+# Strings.
+color green ""([^"\]|\\.)*""
 
 # Trailing whitespaces.
 color ,green " +$"
