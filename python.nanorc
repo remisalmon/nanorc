@@ -5,7 +5,7 @@ syntax python "\.py$"
 comment "# "
 
 # Built-in Keywords.
-color blue "\<(or|and|not|is|int|float|complex|list|tuple|range|str|bytes|bytearray|memoryview|set|frozenset|dict|with)\>"
+color blue "\<(bool|and|or|not|is|int|float|complex|list|tuple|range|str|bytes|bytearray|memoryview|set|frozenset|dict|with)\>"
 color blue "\<(assert|pass|del|return|yield|from|raise|break|continue|import|as|global|nonlocal)\>"
 color blue "\<(if|elif|else|while|for|in|try|except|finally|with|match|case|def|class|async|await)\>"
 
