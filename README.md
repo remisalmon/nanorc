@@ -49,11 +49,8 @@ Python:
 - https://docs.python.org/3/library/index.html
 - https://docs.python.org/3/reference/index.html
 
-Snowflake:
-- https://docs.snowflake.com/en/sql-reference/sql-all.html
-- https://docs.snowflake.com/en/sql-reference/constructs.html
-- https://docs.snowflake.com/en/sql-reference/operators.html
-- https://docs.snowflake.com/en/sql-reference/functions-analytic.html
+SQL:
+- https://www.postgresql.org/docs/current/sql-keywords-appendix.html
 
 XML:
 - https://www.w3.org/TR/2008/REC-xml-20081126/
