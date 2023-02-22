@@ -28,3 +28,13 @@ sql: "test".test ;;
 # comment
 
 test # comment
+
+test "string # not a comment" test
+
+test: "
+multiline string
+# not a comment
+"
+test
+
+bug # comment "string"

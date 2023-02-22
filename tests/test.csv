@@ -1,2 +1,3 @@
 test,"quoted string",test
+test,"""quoted string""",test
 test,"\"quoted string\"",test

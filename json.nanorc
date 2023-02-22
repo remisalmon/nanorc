@@ -1,6 +1,6 @@
 # Syntax highlighting for JSON.
 
-syntax json "\.json$"
+syntax json "\.jsonl?$"
 
 # Numbers and constants.
 color yellow "-?[0-9]+(\.[0-9]+)?(e[+-]?[0-9]+)?"
@@ -10,7 +10,7 @@ color yellow "\<(null|true|false)\>"
 color green ""([^"\]|\\.)*""
 
 # Keys.
-color magenta ""[^"\]+":"
+color magenta ""([^"\]|\\.)*":"
 
 # Symbols.
 color blue "(:|,)( |$)"

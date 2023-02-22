@@ -30,7 +30,8 @@ color green "'([^'\]|\\.)*'"
 icolor yellow "\{?\$[0-9a-z_]+\}?"
 
 # Comments.
-color red "(^| )#.*"
+color red "^ *#.*"
+color red "#[^"']*$"
 
 # Trailing whitespaces.
 color ,green " +$"

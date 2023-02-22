@@ -23,8 +23,13 @@ color blue "\<(def|class)\>"
 # Built-in Constants.
 color yellow "\<(False|True|None|NotImplemented|Ellipsis)\>"
 
+# Built-in Exception.
+color yellow "\<(BaseException|BaseExceptionGroup|GeneratorExit|KeyboardInterrupt|SystemExit|Exception)\>"
+color yellow "\<(ArithmeticError|FloatingPointError|OverflowError|ZeroDivisionError|AssertionError|AttributeError|BufferError|EOFError|ExceptionGroup|ImportError|ModuleNotFoundError|LookupError|IndexError|KeyError|MemoryError|NameError|UnboundLocalError|OSError|BlockingIOError|ChildProcessError|ConnectionError|BrokenPipeError|ConnectionAbortedError|ConnectionRefusedError|ConnectionResetError|FileExistsError|FileNotFoundError|InterruptedError|IsADirectoryError|NotADirectoryError|PermissionError|ProcessLookupError|TimeoutError|ReferenceError|RuntimeError|NotImplementedError|RecursionError|StopAsyncIteration|StopIteration|SyntaxError|IndentationError|TabError|SystemError|TypeError|ValueError|UnicodeError|UnicodeDecodeError|UnicodeEncodeError|UnicodeTranslateError)\>"
+color yellow "\<(Warning|BytesWarning|DeprecationWarning|EncodingWarning|FutureWarning|ImportWarning|PendingDeprecationWarning|ResourceWarning|RuntimeWarning|SyntaxWarning|UnicodeWarning|UserWarning)\>"
+
 # Numbers.
-color yellow "\<[0-9]+(_[0-9])*(\.[0-9]*(_[0-9])*)?(e[+-]?[0-9]+)?\>"
+color yellow "\<[0-9]+(_[0-9])*(\.[0-9]*(_[0-9])*)?(e[+-]?[0-9]+)?j?\>"
 
 # Strings.
 color green ""([^"\]|\\.)*""

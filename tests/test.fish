@@ -28,3 +28,7 @@ Test {$variable} Test
 # comment
 
 Test # comment
+
+Test "string # not a comment" Test
+
+bug # comment "string"

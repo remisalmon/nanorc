@@ -11,6 +11,10 @@ color yellow "\<(yes|no)\>"
 # Variables.
 icolor magenta "\$\{[0-9a-z_.]*\}"
 
+# Comments.
+color red "^ *#.*"
+color red "#[^"']*$"
+
 # Multiline strings.
 color green start="^( *[0-9a-z_]+: *)?"" end=""(\.| *$)"
 color normal ""\."
@@ -24,9 +28,6 @@ color blue "^ *(- +)?[0-9a-z_]+:"
 
 # SQL.
 color red ";;"
-
-# Comments.
-color red "(^| )#.*"
 
 # Trailing whitespaces.
 color ,green " +$"
