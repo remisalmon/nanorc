@@ -46,3 +46,5 @@ multiline string
 """ test
 
 bug # comment "string"
+
+bug "'''" test

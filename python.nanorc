@@ -5,9 +5,9 @@ syntax python "\.py$"
 comment "# "
 
 # Built-in Keywords.
-color blue "\<(bool|and|or|not|is|int|float|complex|list|tuple|range|str|bytes|bytearray|memoryview|set|frozenset|dict|with)\>"
+color blue "\<(bool|and|or|not|is|int|float|complex|list|tuple|range|str|bytes|bytearray|memoryview|set|frozenset|dict)\>"
 color blue "\<(assert|pass|del|return|yield|from|raise|break|continue|import|as|global|nonlocal)\>"
-color blue "\<(if|elif|else|while|for|in|try|except|finally|with|match|case|def|class|async|await)\>"
+color blue "\<(if|elif|else|while|for|in|try|except|finally|with|match|case|def|lambda|class|async|await)\>"
 
 # Built-in Functions.
 color magenta "\<(abs|aiter|all|any|anext|ascii|bin|bool|breakpoint|bytearray|bytes|callable|chr|classmethod|compile|complex|delattr|dict|dir|divmod|enumerate|eval|exec|filter|float|format|frozenset|getattr|globals|hasattr|hash|help|hex|id|input|int|isinstance|issubclass|iter|len|list|locals|map|max|memoryview|min|next|object|oct|open|ord|pow|print|property|range|repr|reversed|round|set|setattr|slice|sorted|staticmethod|str|sum|super|tuple|type|vars|zip|__import__)\("
@@ -32,16 +32,16 @@ color yellow "\<(Warning|BytesWarning|DeprecationWarning|EncodingWarning|FutureW
 color yellow "\<[0-9]+(_[0-9])*(\.[0-9]*(_[0-9])*)?(e[+-]?[0-9]+)?j?\>"
 
 # Strings.
-color green ""([^"\]|\\.)*""
-color green "'([^'\]|\\.)*'"
+icolor green "[bfr]?"([^"\]|\\.)*""
+icolor green "[bfr]?'([^'\]|\\.)*'"
 
 # Comments.
 color red "^ *#.*"
 color red "#[^"']*$"
 
 # Multiline strings.
-color green start=""""([^"]?|$)" end="(^|[^"]?)""""
-color green start="'''([^']?|$)" end="(^|[^']?)'''"
+icolor green start="[bfr]?"""([^"]?|$)" end="(^|[^\]?)""""
+icolor green start="[bfr]?'''([^']?|$)" end="(^|[^\]?)'''"
 
 # Trailing whitespaces.
 color ,green " +$"
