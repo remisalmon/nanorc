@@ -1,7 +1,18 @@
+
 {"test": -1.0e+2}
 
 {"test": null}
 
 {"test": "string"}
 
-{"test": []}
+["string"]
+
+{
+  "test": [],
+  "test": {}
+}
+
+[
+  "test",
+  "test"
+]
