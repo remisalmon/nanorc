@@ -11,7 +11,6 @@ color blue "\<(if|else|end|for|in|while|break|continue|function|return|begin|and
 
 # Parameter expansion.
 color blue "[][(){}*~]"
-color normal "[][~]{2,}"
 
 # Commands.
 color magenta "\<(command|builtin|time|exec)\>"
@@ -27,7 +26,8 @@ color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
 
 # Variable names.
-icolor yellow "\{?\$[0-9a-z_]+\}?"
+icolor yellow "\$[0-9a-z_]+"
+icolor yellow "\{\$[0-9a-z_]+\}"
 
 # Comments.
 color red "^ *#.*"
