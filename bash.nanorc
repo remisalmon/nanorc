@@ -1,0 +1,44 @@
+# Syntax highlighting for bash scripts.
+
+syntax bash "\.(ba)?sh$"
+
+header "^#!.*/(env +)?bash *$"
+
+comment "#"
+
+# Builtin Commands.
+color blue "[.:] "
+color blue "(\[ | \])"
+color blue "\<(alias|bg|bind|break|builtin|caller|cd|command|compgen|complete|compopt|continue|declare|dirs|disown|echo|enable|eval|exec|exit|export|fc|fg|getopts|hash|help|history|jobs|kill|let|local|logout|mapfile|popd|printf|pushd|pwd|read|readarray|readonly|return|set|shift|shopt|source|suspend|test|times|trap|type|typeset|ulimit|umask|unalias|unset|wait)\>"
+
+# Reserved Words.
+color blue "(^| )! "
+color blue "(\[\[ | \]\])"
+color blue "(\{ | \})"
+color blue "\<(case|do|done|elif|else|esac|fi|for|function|if|in|select|then|time|until|while)\>"
+
+# Command Substitution and Arithmetic Expansion.
+color blue "(\$\(|\))"
+color blue "`"
+color blue "(\$\(\(|\)\))"
+
+# Command options.
+icolor magenta " --?[0-9a-z-]+=?"
+
+# Variable names.
+icolor yellow "\$[0-9a-z_]+"
+icolor yellow "\$\{[0-9a-z_]+(:[=?+-]?[0-9a-z_]*)?\}"
+
+# Comments.
+color red "^ *#.*"
+color red "#[^"']*$"
+
+# Parameter and Variable Index.
+color yellow "\$[!#$*0?@_-]"
+
+# Strings.
+color green ""([^"\]|\\.)*""
+color green "'([^'\]|\\.)*'"
+
+# Trailing whilespaces.
+color ,green " +$"
