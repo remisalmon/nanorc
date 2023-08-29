@@ -23,7 +23,11 @@ test
 
 sql: test ;;
 
-sql: "test".test ;;
+sql: "not a multiline string".test ;;
+
+filters: [
+  test: "not a multiline string",
+]
 
 # comment
 

@@ -16,8 +16,8 @@ color red "^ *#.*"
 color red "#[^"']*$"
 
 # Multiline strings.
-color green start="^( *[0-9a-z_]+: *)?"" end=""(\.| *$)"
-color normal ""\."
+color green start="^( *[0-9a-z_]+: *)?"" end=""(\.| *,| *$)"
+color normal ""(\.| *,)"
 
 # Strings.
 color green ""([^"\]|\\.)*""
