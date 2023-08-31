@@ -40,8 +40,8 @@ color red "^ *#.*"
 color red "#[^"']*$"
 
 # Multiline strings.
-icolor green start="[bfr]?"""([^"]?|$)" end="(^|[^\]?)""""
-icolor green start="[bfr]?'''([^']?|$)" end="(^|[^\]?)'''"
+icolor green start="[bfr]?"""" end="""""
+icolor green start="[bfr]?'''" end="'''"
 
 # Trailing whitespaces.
 color ,green " +$"

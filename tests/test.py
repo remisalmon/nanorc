@@ -22,6 +22,10 @@ test "string" test
 
 test 'string' test
 
+test "" test
+
+test "\\" test
+
 test """multiline string""" test
 
 test """
@@ -34,6 +38,12 @@ test '''
 multiline string
 ''' test
 
+test """""" test
+
+test """""""" test
+
+test """\\""" test
+
 # comment
 
 test # comment
@@ -45,6 +55,6 @@ multiline string
 # not a comment
 """ test
 
-bug # comment "string"
+bug # comment "not a string"
 
-bug "'''" test
+bug "'''" not a string
