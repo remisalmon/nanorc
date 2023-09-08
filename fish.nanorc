@@ -35,3 +35,5 @@ color red "#[^"']*$"
 
 # Trailing whitespaces.
 color ,green " +$"
+
+test
