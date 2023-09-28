@@ -13,9 +13,8 @@ color green ""([^"\]|\\.)*""
 color magenta ""([^"\]|\\.)*"\ *:"
 
 # Symbols.
-color blue "(:|,)( |$)"
-color blue "(^ *|[:,] +)(\{|\[+\{?)"
-color blue "(\}+\]*|\]+\}*)(, *|$)"
+color blue "(^ *|[:,] +)(\{|\[+\{?)?"
+color blue "[]}]*,?$"
 
 # Trailing whitespaces.
 color ,green " +$"
