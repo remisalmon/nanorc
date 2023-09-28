@@ -18,11 +18,22 @@ map:
 
 test: {map: test}
 
+test: {
+  map: test
+}
+
 - {map: test}
 
 - list
 
+- - list
+
 [list]
+
+[[list]]
+
+test:
+  - list
 
 test: [list]
 
