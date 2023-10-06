@@ -13,6 +13,11 @@ jobs:
       - name: Checkout branch
         uses: actions/checkout@v3
 
+      - name: Parse nanorc files
+        run: |
+          # see https://www.nano-editor.org/dist/latest/nano.html#Nanorc-Files
+          grep -v -E "^(#|syntax|header|magic|formatter|linter|comment|tabgives|color|icolor|include|extendsyntax|$)" *.nanorc && exit 1 || exit 0
+
       - name: Run nano
         shell: bash
         run: |
@@ -20,8 +25,3 @@ jobs:
 
           echo "include \"$(pwd)/*.nanorc\"" > ~/.nanorc
           echo "" | nano 2> log.txt || grep "^Error" log.txt && exit 1 || exit 0
-
-#       - name: Parse nanorc files
-#         run: |
-#           # see https://www.nano-editor.org/dist/latest/nano.html#Nanorc-Files
-#           grep -v -E "^(#|syntax|header|magic|formatter|linter|comment|tabgives|color|icolor|include|extendsyntax|$)" *.nanorc && exit 1 || exit 0
