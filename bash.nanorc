@@ -42,3 +42,5 @@ color green "'([^'\]|\\.)*'"
 
 # Trailing whilespaces.
 color ,green " +$"
+
+test
