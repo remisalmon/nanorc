@@ -11,6 +11,9 @@ color yellow "\<(yes|no)\>"
 # Variables.
 icolor magenta "\$\{[0-9a-z_.]*\}"
 
+# SQL.
+color red ";;"
+
 # Comments.
 color red "^ *#.*"
 color red "#[^"']*$"
@@ -25,9 +28,6 @@ color green "'([^'\]|\\.)*'"
 
 # Keywords.
 color blue "^ *(- +)?[0-9a-z_]+:"
-
-# SQL.
-color red ";;"
 
 # Trailing whitespaces.
 color ,green " +$"
