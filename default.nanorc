@@ -1,0 +1,14 @@
+# Syntax highlighting for all other files.
+
+syntax default
+
+comment "#"
+
+# Comments.
+color red "^ *#.*"
+
+# Tabs.
+color ,red "	"
+
+# Trailing whitespaces.
+color ,green " +$"
