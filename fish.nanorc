@@ -11,7 +11,7 @@ color blue "\<(if|else|end|for|in|while|break|continue|function|return|begin|and
 color blue "(&&|\|\|)"
 
 # Parameter expansion.
-color blue "[][(){}*~]"
+color blue "[][)(}{,*~]"
 
 # Commands.
 color magenta "\<(cd|echo|printf|set|read|string|math|argparse|count|type|test|contains|abbr|eval|source|set_color|status|bind|commandline|random)\>"
