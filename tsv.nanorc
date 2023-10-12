@@ -1,0 +1,12 @@
+# Syntax highlighting for TSV files.
+
+syntax tsv "\.tsv$"
+
+# Comas.
+color ,magenta "	"
+
+# Strings.
+color green ""([^"\]|\\.)*""
+
+# Trailing whitespaces.
+color ,green " +$"
