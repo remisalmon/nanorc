@@ -21,11 +21,11 @@ multiline string
 "
 test
 
-sql: test ;;
+test: test ;;
 
-sql: "not a multiline string".test ;;
+test: "not a multiline string".test ;;
 
-filters: [
+test: [
   test: "not a multiline string",
 ]
 

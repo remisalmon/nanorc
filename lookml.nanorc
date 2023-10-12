@@ -19,7 +19,7 @@ color red "^ *#.*"
 color red "#[^"']*$"
 
 # Multiline strings.
-color green start="^( *[0-9a-z_]+: *)?"" end=""(\.| *,| *$)"
+color green start="^( *[0-9a-z_]+ *: *)?"" end=""(\.| *,| *$)"
 color normal ""(\.| *,)"
 
 # Strings.
@@ -27,7 +27,7 @@ color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
 
 # Keywords.
-color blue "^ *(- +)?[0-9a-z_]+:"
+color blue "^ *(- +)?[0-9a-z_]+ *:"
 
 # Trailing whitespaces.
 color ,green " +$"
