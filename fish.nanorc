@@ -22,16 +22,15 @@ color magenta "\<alias\>"
 icolor magenta " --?[0-9a-z-]+=?"
 
 # Strings.
-color green ""([^"\]|\\.)*""
-color green "'([^'\]|\\.)*'"
+color green start=""([^"\]|\\.)*" end="([^"\]|\\.)?""
+color green start="'([^'\]|\\.)*" end="([^'\]|\\.)?'"
 
 # Variable names.
 icolor yellow "\$[0-9a-z_]+"
 icolor yellow "\{\$[0-9a-z_]+\}"
 
 # Comments.
-color red "^ *#.*"
-color red "#[^"']*$"
+color red "#("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 
 # Trailing whitespaces.
 color ,green " +$"

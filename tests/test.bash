@@ -24,12 +24,44 @@ Test ${variable:-} Test
 
 Test "string" Test
 
+Test "" Test
+
+Test "\"" Test
+
+Test "\\" Test
+
+Test "multline
+string" Test
+
+Test "
+multline
+string
+" Test
+
+Test
+"
+multline
+string
+"
+Test
+
+Test "
+\"" Test
+
+Test "
+\\" Test
+
+Test "
+" Test
+
 Test 'string' Test
 
 # comment
 
 Test # comment
 
+Test # "comment"
+
 Test "string # not a comment" Test
 
-bug # comment "string"
+bug # "comment

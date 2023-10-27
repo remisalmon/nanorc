@@ -19,6 +19,36 @@ Command options --options=Test
 
 Test "string" Test
 
+Test "\"" Test
+
+Test "\\" Test
+
+Test "" Test
+
+Test "multiline
+string" Test
+
+Test "
+multiline
+string
+" Test
+
+Test
+"
+multiline
+string
+"
+Test
+
+Test "
+\"" Test
+
+Test "
+\\" Test
+
+Test "
+" Test
+
 Test 'string' Test
 
 Test $variable Test
@@ -29,6 +59,8 @@ Test {$variable} Test
 
 Test # comment
 
+Test # "comment"
+
 Test "string # not a comment" Test
 
-bug # comment "string"
+bug # "comment

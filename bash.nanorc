@@ -29,16 +29,15 @@ icolor magenta " --?[0-9a-z-]+=?"
 icolor yellow "\$[0-9a-z_]+"
 icolor yellow "\$\{[0-9a-z_]+(:[=?+-]?[0-9a-z_]*)?\}"
 
-# Comments.
-color red "^ *#.*"
-color red "#[^"']*$"
-
 # Parameter and Variable Index.
 color yellow "\$[!#$*0?@_-]"
 
 # Strings.
-color green ""([^"\]|\\.)*""
-color green "'([^'\]|\\.)*'"
+color green start=""([^"\]|\\.)*" end="([^"\]|\\.)?""
+color green start="'([^'\]|\\.)*" end="([^"\]|\\.)?'"
+
+# Comments.
+color red "#("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 
 # Trailing whilespaces.
 color ,green " +$"
