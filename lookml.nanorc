@@ -5,7 +5,7 @@ syntax lookml "\.l(oo)?kml$"
 comment "# "
 
 # Numbers and constants.
-color yellow "\<[0-9]+(\.[0-9]*)?(e[+-]?[0-9]+)?\>"
+icolor yellow "\<[+-]?[0-9]+(\.[0-9]*)?(e[+-]?[0-9]+)?\>"
 color yellow "\<(yes|no)\>"
 
 # Variables.
@@ -14,17 +14,15 @@ icolor magenta "\$\{[0-9a-z_.]*\}"
 # SQL.
 color red ";;"
 
-# Comments.
-color red "^ *#.*"
-color red "#[^"']*$"
-
-# Multiline strings.
-color green start="^( *[0-9a-z_]+ *: *)?"" end=""(\.| *,| *$)"
-color normal ""(\.| *,)"
-
 # Strings.
 color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
+
+# Comments.
+color red "#("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
+
+# Multiline strings.
+color green start="^ *(- +)?([0-9a-z_]+ *: *)?"([^"\]|\\.)*" end="""
 
 # Keywords.
 color blue "^ *(- +)?[0-9a-z_]+ *:"

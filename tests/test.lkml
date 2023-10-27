@@ -8,25 +8,39 @@ test 1.e+1 test
 
 test "string" test
 
+test "\"" test
+
+test "\\" test
+
+test "" test
+
 test 'string' test
 
 test
-"
-multiline string
-"
-test
+"multiline
+string" test
 
-test: "
-multiline string
-"
 test
+"
+\"" test
+
+test
+"
+\\" test
+
+test
+"
+" test
+
+test: "multiline
+string" test
 
 test: test ;;
 
-test: "not a multiline string".test ;;
+test: "string".test ;;
 
 test: [
-  test: "not a multiline string",
+  test: "string",
 ]
 
 # comment
@@ -35,10 +49,9 @@ test # comment
 
 test "string # not a comment" test
 
-test: "
-multiline string
-# not a comment
-"
 test
+"multiline
+# not a comment
+string" test
 
-bug # comment "string"
+bug # "comment
