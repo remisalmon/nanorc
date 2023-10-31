@@ -1,21 +1,24 @@
 #!/usr/bin/env fish
 
-Test if Test
+if
 
-Parameter expansion[0] Test
+Test && Test
 
-Test (Parameter expansion) Test
+Test**?
 
-Parameter expansion{s,} Test
+(Test)
 
-Test ~/Parameter expansion
+$(Test)
 
-Parameter expansion * Test
-Parameter expansion** Test
+{Test,Test}
 
-Test cd Command
+Test[0]
 
-Command options --options=Test
+~/Test
+
+cd
+
+Test --options=Test
 
 Test "string" Test
 
@@ -25,30 +28,6 @@ Test "\\" Test
 
 Test "" Test
 
-Test "multiline
-string" Test
-
-Test "
-multiline
-string
-" Test
-
-Test
-"
-multiline
-string
-"
-Test
-
-Test "
-\"" Test
-
-Test "
-\\" Test
-
-Test "
-" Test
-
 Test 'string' Test
 
 Test $variable Test
@@ -57,9 +36,15 @@ Test {$variable} Test
 
 # comment
 
+# "comment"
+
+# "comment
+
 Test # comment
 
 Test # "comment"
+
+Test#comment
 
 Test "string # not a comment" Test
 

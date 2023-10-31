@@ -7,37 +7,51 @@ header "^#!.*/(env +)?bash *$"
 comment "#"
 
 # Builtin Commands.
-color blue "[.:] "
-color blue "(\[ | \])"
-color blue "\<(alias|bg|bind|break|builtin|caller|cd|command|compgen|complete|compopt|continue|declare|dirs|disown|echo|enable|eval|exec|exit|export|fc|fg|getopts|hash|help|history|jobs|kill|let|local|logout|mapfile|popd|printf|pushd|pwd|read|readarray|readonly|return|set|shift|shopt|source|suspend|test|times|trap|type|typeset|ulimit|umask|unalias|unset|wait)\>"
+color magenta "[.:] "
+color magenta "(\[ | \])"
+color magenta "\<(alias|bg|bind|break|builtin|caller|cd|command|compgen|complete|compopt|continue|declare|dirs|disown|echo|enable|eval|exec|exit|export|fc|fg|getopts|hash|help|history|jobs|kill|let|local|logout|mapfile|popd|printf|pushd|pwd|read|readarray|readonly|return|set|shift|shopt|source|suspend|test|times|trap|type|typeset|ulimit|umask|unalias|unset|wait)\>"
 
 # Reserved Words.
-color blue "(^| )! "
-color blue "(\[\[ | \]\])"
-color blue "(\{ | \})"
+color blue "! "
+color blue "(\[\[ |\{ | \]\]| \})"
 color blue "\<(case|do|done|elif|else|esac|fi|for|function|if|in|select|then|time|until|while)\>"
 
-# Command Substitution and Arithmetic Expansion.
-color blue "(\$\(|\))"
-color blue "`"
-color blue "(\$\(\(|\)\))"
-
-# Command options.
-icolor magenta " --?[0-9a-z-]+=?"
-
-# Variable names.
-icolor yellow "\$[0-9a-z_]+"
-icolor yellow "\$\{[0-9a-z_]+(:[=?+-]?[0-9a-z_]*)?\}"
-
 # Parameter and Variable Index.
+icolor yellow "\$[a-z_]+[0-9a-z_]*"
 color yellow "\$[!#$*0?@_-]"
 
+# Pipelines and Operators.
+color blue "(\|&?|;|&&?|\|\|)"
+
+# Grouping Commands.
+color blue "[()]"
+
+# Brace Expansion.
+color blue "[{},]"
+
+# Shell Parameter Expansion.
+icolor yellow "\$\{[^}]+\}"
+
+# Command and Process Substitution.
+color blue "`"
+color blue "([$<>]\(|\))"
+
+# Arithmetic Expansion.
+color blue "(\$\(\(|\)\))"
+
+# Redirections.
+# TODO
+
+# Command options.
+icolor magenta " --?[0-9a-z_-]+=?"
+
 # Strings.
-color green start=""([^"\]|\\.)*" end="([^"\]|\\.)?""
-color green start="'([^'\]|\\.)*" end="([^"\]|\\.)?'"
+color green ""([^"\]|\\.)*""
+color green "'([^'\]|\\.)*'"
 
 # Comments.
-color red "#("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
+color red "^ *#.*$"
+color red " #("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 
 # Trailing whilespaces.
 color ,green " +$"

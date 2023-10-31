@@ -2,25 +2,41 @@
 
 . Test
 
-Test [ Test ]
+[ Test ]
+
+alias
 
 ! Reserved words
 
-Test [[ Reserved words ]] Test
+[[ Reserved words ]]
 
-Test $(Command substitution) Test
+{ Test }
 
-Test `Command substitution` Test
+case
 
-Test $(( Arithmetic expansion )) Test
+$variable
 
-Command --options=Test
+$!
 
-Test $! Test
+Test | Test
 
-Test $variable Test
+(Grouping Commands)
 
-Test ${variable:-} Test
+{Brace,Expansion}
+
+${test:-}
+
+${test:0:1}
+
+`Command substitution`
+
+$(Command substitution)
+
+<(Process Substitution)
+
+$((Arithmetic expansion))
+
+Test --options=Test
 
 Test "string" Test
 
@@ -30,37 +46,19 @@ Test "\"" Test
 
 Test "\\" Test
 
-Test "multline
-string" Test
-
-Test "
-multline
-string
-" Test
-
-Test
-"
-multline
-string
-"
-Test
-
-Test "
-\"" Test
-
-Test "
-\\" Test
-
-Test "
-" Test
-
 Test 'string' Test
 
 # comment
 
+# "comment"
+
+# "comment
+
 Test # comment
 
 Test # "comment"
+
+Test#not a comment
 
 Test "string # not a comment" Test
 
