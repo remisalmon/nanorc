@@ -39,6 +39,7 @@ icolor green "r?[bf]?"([^"\]|\\.)*""
 icolor green "r?[bf]?'([^'\]|\\.)*'"
 
 # Comments
+color red "^ *#.*$"
 color red "#("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 
 # Multiline strings.

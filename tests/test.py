@@ -72,7 +72,15 @@ test 'string' test
 
 # comment
 
+# "comment"
+
+# "comment
+
 test # comment
+
+test#comment
+
+test # "comment"
 
 test "string # not a comment" test
 

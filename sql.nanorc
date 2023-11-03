@@ -14,7 +14,7 @@ color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
 
 # Comments
-color red "--.*"
+color red "--.*$"
 color red start="/\*" end="\*/"
 
 # Trailing whitespaces.
