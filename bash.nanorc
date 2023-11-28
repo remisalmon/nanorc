@@ -2,7 +2,7 @@
 
 syntax bash "\.(ba)?sh$"
 
-header "^#!.*/(env +)?bash *$"
+header "^#!.*/(env +)?bash( |$)"
 
 comment "#"
 

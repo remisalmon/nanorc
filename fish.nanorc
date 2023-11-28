@@ -2,7 +2,7 @@
 
 syntax fish "\.fish$"
 
-header "^#!.*/(env +)?fish *$"
+header "^#!.*/(env +)?fish( |$)"
 
 comment "# "
 
