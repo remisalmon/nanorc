@@ -15,11 +15,13 @@ color blue "^\.\.\.( |$)"
 
 # Maps.
 icolor blue "[0-9a-z_]+[0-9a-z_ -]*:( |$)"
+#color blue "(^ *|[:-] )\{+"
+#color blue "\}+$"
 
 # Lists.
 color blue "^ *(- )+"
-color blue "(^ *|[:-] )\[+"
-color blue "\]+$"
+#color blue "(^ *|[:-] )\[+"
+#color blue "\]+$"
 color normal ":"
 
 # Constants.
@@ -30,7 +32,8 @@ color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
 
 # Comments.
-color red "(^| )#.*$"
+color red "^ *#.*$"
+color red " #("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 
 # Trailing whitespaces.
 color ,green " +$"

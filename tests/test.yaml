@@ -43,6 +43,16 @@ test "string" test
 
 test 'string' test
 
+test "test # not a comment" test
+
 # comment
 
+# "comment"
+
 test # comment
+
+test # "comment"
+
+test#not a comment
+
+bug # "comment
