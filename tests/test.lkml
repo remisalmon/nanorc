@@ -16,24 +16,30 @@ test "" test
 
 test 'string' test
 
-test
-"multiline
-string" test
-
-test
-"
-\"" test
-
-test
-"
-\\" test
-
-test
-"
-" test
-
 test: "multiline
 string" test
+
+test:
+"
+multiline string
+" test
+
+test: "
+\"" test
+
+test: "
+\\" test
+
+test: "
+" test
+
+test: "multiline string"
+
+test: "" test
+
+test: "\"" test
+
+test: "\\" test
 
 test: test ;;
 
@@ -45,12 +51,15 @@ test: [
 
 # comment
 
+# "comment"
+
 test # comment
+
+test # "comment"
 
 test "string # not a comment" test
 
-test
-"multiline
+test: "multiline
 # not a comment
 string" test
 
