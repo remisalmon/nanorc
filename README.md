@@ -36,6 +36,9 @@ Dockerfile:
 fish:
 - https://fishshell.com/docs/current/commands.html
 
+Go:
+- https://go.dev/ref/spec
+
 JSON:
 - https://www.json.org/json-en.html
 
@@ -51,6 +54,10 @@ Python:
 
 SQL:
 - https://www.postgresql.org/docs/current/sql-keywords-appendix.html
+
+Terraform:
+- https://developer.hashicorp.com/terraform/language/syntax/configuration
+- https://github.com/hashicorp/hcl/blob/main/hclsyntax/spec.md
 
 XML:
 - https://www.w3.org/TR/2008/REC-xml-20081126/
