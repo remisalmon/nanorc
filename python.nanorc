@@ -2,6 +2,8 @@
 
 syntax python "\.py$"
 
+header "^#!.*/(env +)?python3?( |$)"
+
 comment "# "
 
 # Keywords.
