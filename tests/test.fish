@@ -44,7 +44,7 @@ Test # comment
 
 Test # "comment"
 
-Test#comment
+Test# not a comment
 
 Test "string # not a comment" Test
 
