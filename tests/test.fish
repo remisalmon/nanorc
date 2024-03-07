@@ -34,6 +34,8 @@ Test $variable Test
 
 Test {$variable} Test
 
+Test $cd Test
+
 # comment
 
 # "comment"
