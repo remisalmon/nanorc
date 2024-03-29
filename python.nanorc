@@ -26,11 +26,11 @@ color magenta "\<(abs|aiter|all|anext|any|ascii|bin|bool|breakpoint|bytearray|by
 color normal "(\.[a-z_]+)?\("
 
 # Functions.
-color magenta "^ *@[a-z_]+(\.[0-9a-z_]+)*"
-color magenta "\<def [a-z_][0-9a-z_]*"
+icolor magenta "\<def [a-z_][0-9a-z_]*"
+icolor magenta "^ *@[a-z_][0-9a-z_]*(\.[a-z_][0-9a-z_]*)*"
 
 # Classes.
-color magenta "\<class [A-Z][0-9A-Za-z]*"
+icolor magenta "\<class [a-z][0-9a-z]*"
 color blue "\<(def|class)\>"
 
 # Numbers.
