@@ -25,11 +25,11 @@ icolor green "'([^'\]|\\.)*'"
 color red "^ *(#|//).*$"
 color red "(#|//)("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 
+# Template Expressions.
+color normal start="<<-?EO." end="EO."
+
 # Multiline Comments.
 color red start="/\*" end="\*/"
-
-# Tempate Expressions.
-color normal start="<<-?EO." end="EO."
 
 # Trailing whitespaces.
 color ,green " +$"
