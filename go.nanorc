@@ -32,15 +32,15 @@ icolor yellow "\<0x(_?[0-9a-f]+)+\>"
 # Strings.
 icolor green ""([^"\]|\\.)*""
 
-# Multiline strings.
-icolor green start="`" end="`"
-
 # Comments.
 color red "^ *//.*$"
 color red "//("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 
 # Multiline comments.
 color red start="/\*" end="\*/"
+
+# Multiline strings.
+icolor green start="`" end="`"
 
 # Trailing whitespaces.
 color ,green " +$"

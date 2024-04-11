@@ -42,4 +42,20 @@ test // "comment"
 test /* comment
 */ test
 
+test "string // not a comment" test
+
+test `multiline
+// not a comment
+string
+`
+
+test `multiline
+/*
+not a comment
+*/
+string
+`
+
 bug // "comment
+
+bug "`" not a string
