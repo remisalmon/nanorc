@@ -2,12 +2,12 @@
 
 syntax yaml "\.ya?ml$"
 
-header "^YAML 1\.[0-9.]+ *$"
+header "^%YAML 1\.[0-2] *$"
 
 comment "# "
 
 # Headers.
-color red "^YAML 1\.[0-9.]+ *$"
+color red "^%YAML 1\.[0-2] *$"
 
 # Separators.
 color blue "^---( |$)"
@@ -33,7 +33,7 @@ color green "'([^'\]|\\.)*'"
 
 # Comments.
 color red "^ *#.*$"
-color red " #("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
+color red "[ ]#("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 
 # Trailing whitespaces.
 color ,green " +$"
