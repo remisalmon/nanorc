@@ -47,9 +47,17 @@ test """multiline string""" test
 test """multiline
 string""" test
 
-test """
+test
+"""
 multiline string
-""" test
+"""
+test
+
+test """""""" test
+
+test """\"""" test
+
+test """\\""" test
 
 test """multiline
 string \"""" test
@@ -57,16 +65,15 @@ string \"""" test
 test """multiline
 string \\""" test
 
+test """""" test
+
 test """
 """ test
 
-test """""" test
-
-test """""""" test
-
-test """\"""" test
-
-test """\\""" test
+test
+"""
+"""
+test
 
 test 'string' test
 
