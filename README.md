@@ -8,7 +8,7 @@ New and improved nanorc files for [nano](https://www.nano-editor.org/) syntax hi
 
 ## Colors
 
-- keywords/symbols: `blue`
+- keywords: `blue`
 - attributes/functions/classes/etc.: `magenta`
 - numbers/constants/variables: `yellow`
 - srings: `green`
