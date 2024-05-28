@@ -4,14 +4,12 @@ syntax terraform "\.tf(vars)?$"
 
 comment "# "
 
-# Identifiers.
-icolor magenta "^ *[a-z_-][0-9a-z_-]* *[="'{]"
+# Arguments.
+icolor magenta "^ *[a-z_-][0-9a-z_-]* *="
 
-# Operators.
-color blue "[][}{)(><*/%!:?.,+-]"
-color blue "(&&|\|\|)"
-color blue "([=!<>]?=|=>)"
-color blue "[$%]\{"
+# Blocks.
+icolor blue "^ *[a-z_-][0-9a-z_-]* *["{]"
+color normal "[={]"
 
 # Literal Values.
 icolor yellow "\<[0-9]+(\.[0-9])?(e[+-]?[0-9]+)?\>"
@@ -19,7 +17,6 @@ color yellow "\<(true|false|null)\>"
 
 # Strings.
 icolor green ""([^"\]|\\.)*""
-icolor green "'([^'\]|\\.)*'"
 
 # Comments.
 color red "^ *(#|//).*$"

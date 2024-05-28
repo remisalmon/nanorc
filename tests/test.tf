@@ -1,20 +1,14 @@
-test =
-
-test "test" {
+test = "test"
 
 test {
 
-[test]
+test "test" {
 
-!!test
+test "test" "test" {
 
 1.0e+1
 
 true
-
-"string"
-
-'string'
 
 # comment
 
