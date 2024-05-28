@@ -6,15 +6,11 @@ syntax json "\.jsonl?$"
 icolor yellow "-?[0-9]+(\.[0-9]+)?(e[+-]?[0-9]+)?"
 color yellow "\<(null|true|false)\>"
 
-# Symbols.
-color blue "[][}{:,]+"
-
 # Strings.
 color green ""([^"\]|\\.)*""
 
 # Keys.
-color magenta ""([^"\]|\\.)*"\ *:"
-color blue ":"
+color blue ""([^"\]|\\.)*"[ ]*:"
 
 # Trailing whitespaces.
 color ,green " +$"
