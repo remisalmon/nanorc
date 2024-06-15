@@ -8,12 +8,14 @@ comment "<!--|-->"
 
 # Elements.
 color blue "(<[^> ]+|/?>)"
+color normal "[</>]"
 
 # Attributes.
 color magenta " [^<=]+="
 
 # Strings.
 color green ""([^"\]|\\.)*""
+color green "'([^'\]|\\.)*'"
 
 # Headers.
 color red "^<\?xml.*\?> *$"
