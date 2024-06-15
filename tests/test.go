@@ -14,20 +14,28 @@ test 0x0F test
 
 test "string" test
 
-test `string` test
+test "\"" test
+
+test "\\" test
 
 test "" test
 
-test "\\" test
+test `string` test
+
+test `\` test
+
+test `` test
 
 test `multiline string` test
 
 test `multiline
 string` test
 
-test `` test
-
-test `\` test
+test
+`
+multiline string
+`
+test
 
 // comment
 
@@ -35,7 +43,7 @@ test `\` test
 
 // "comment
 
-test // Comment
+test // comment
 
 test // "comment"
 
@@ -46,15 +54,12 @@ test "string // not a comment" test
 
 test `multiline
 // not a comment
-string
-`
+string` test
 
 test `multiline
-/*
-not a comment
+/* not a comment
 */
-string
-`
+string` test
 
 bug // "comment
 
