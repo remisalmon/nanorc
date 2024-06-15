@@ -39,12 +39,6 @@ color blue "([$<>]\(|\))"
 # Arithmetic Expansion.
 color blue "(\$\(\(|\)\))"
 
-# Redirections.
-# TODO
-
-# Command options.
-icolor magenta " --?[0-9a-z_-]+=?"
-
 # Strings.
 color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"

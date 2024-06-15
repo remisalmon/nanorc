@@ -36,8 +36,6 @@ $(Command substitution)
 
 $((Arithmetic expansion))
 
-Test --options=Test
-
 Test "string" Test
 
 Test "" Test

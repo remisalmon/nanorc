@@ -18,8 +18,6 @@ Test[0]
 
 cd
 
-Test --options=Test
-
 Test "string" Test
 
 Test "\"" Test

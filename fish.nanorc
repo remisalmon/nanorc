@@ -19,9 +19,6 @@ color magenta "\<(cd|echo|printf|set|read|string|math|argparse|count|type|test|c
 color magenta "\<(fish|prompt)_[a-z_]+\>"
 color magenta "\<alias\>"
 
-# Command options.
-icolor magenta " --?[0-9a-z_-]+=?"
-
 # Variable expansion.
 icolor yellow "\$[0-9a-z_]+"
 icolor yellow "\{\$[0-9a-z_]+\}"
