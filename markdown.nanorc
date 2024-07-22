@@ -26,7 +26,7 @@ color magenta "__?[^_` ][^_`]*__?"
 color yellow start="^ *>" end="^ *$"
 
 # Code Blocks.
-color yellow "^ {4,}.*"
+color yellow "^ {4,}.*$"
 color yellow start="```" end="```"
 
 # Code.
