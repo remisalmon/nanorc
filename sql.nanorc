@@ -14,7 +14,8 @@ color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
 
 # Comments
-color red "--.*$"
+color red "^ *--.*$"
+color red "--('([^'\]|\\.)*'|[^'])*$"
 
 # Multiline comments.
 color red start="/\*" end="\*/"
