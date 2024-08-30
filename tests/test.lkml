@@ -33,7 +33,7 @@ test: "
 test: "
 " test
 
-test: "multiline string"
+test: "multiline string" test
 
 test: "" test
 
