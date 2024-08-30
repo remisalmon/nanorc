@@ -4,8 +4,9 @@ syntax dockerfile "Dockerfile$"
 
 comment "# "
 
-# Keywords.
+# Instructions.
 color blue "^(ADD|ARG|CMD|COPY|ENTRYPOINT|ENV|EXPOSE|FROM|HEALTHCHECK|LABEL|MAINTAINER|ONBUILD|RUN|SHELL|STOPSIGNAL|USER|VOLUME|WORKDIR) "
+color blue " AS "
 
 # Environment variables.
 icolor yellow "\$[0-9a-z_]+"
