@@ -30,8 +30,11 @@ https://www.nano-editor.org/dist/latest/nanorc.5.html
 Bash:
 - https://www.gnu.org/software/bash/manual/bash.html
 
+CSV:
+- https://www.rfc-editor.org/rfc/rfc4180
+
 Dockerfile:
-- https://docs.docker.com/engine/reference/builder/
+- https://docs.docker.com/reference/dockerfile/
 
 fish:
 - https://fishshell.com/docs/current/commands.html
@@ -41,6 +44,9 @@ Go:
 
 JSON:
 - https://www.json.org/json-en.html
+
+Logs:
+- https://www.w3.org/Daemon/User/Config/Logging.html
 
 LookML:
 - https://cloud.google.com/looker/docs/reference/lookml-quick-reference
@@ -58,6 +64,9 @@ SQL:
 Terraform:
 - https://developer.hashicorp.com/terraform/language/syntax/configuration
 - https://github.com/hashicorp/hcl/blob/main/hclsyntax/spec.md
+
+TOML:
+- https://toml.io/en/v1.0.0
 
 XML:
 - https://www.w3.org/TR/2008/REC-xml-20081126/
