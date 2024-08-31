@@ -1,0 +1,48 @@
+key = test
+
+key.key = test
+
+"key" = test
+
+"" = test
+
+[table]
+
+[table.table]
+
+[[table]]
+
+["table"]
+
+[["table"]]
+
+[table."table"]
+
+["table".table]
+
+["table"."table"]
+
+[""]
+
+["".""]
+
+true
+
++1.1e-1
+
+"string"
+
+"""multiline
+string"""
+
+"""
+multiline string
+"""
+
+# comment
+
+test # comment
+
+test # "comment"
+
+test # "bug
