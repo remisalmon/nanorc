@@ -1,0 +1,13 @@
+# Syntax highlighting for log files.
+
+syntax log "\.log$"
+
+# Dates.
+color blue "(^| )\[[^]]+\] "
+
+# Strings.
+color green ""([^"\]|\\.)*""
+color green "'([^'\]|\\.)*'"
+
+# Trailing whitespaces.
+color ,green " +$"
