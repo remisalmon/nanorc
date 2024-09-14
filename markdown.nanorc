@@ -27,7 +27,7 @@ color yellow start="^ *>" end="^ *$"
 
 # Code Blocks.
 color yellow "^ {4,}.*$"
-color yellow start="```" end="```"
+color yellow start="^ *```" end="``` *$"
 
 # Code.
 color yellow "`[^`]+`"

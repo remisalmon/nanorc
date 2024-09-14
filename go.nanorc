@@ -35,9 +35,10 @@ icolor green ""([^"\]|\\.)*""
 # Comments.
 color red "^ *//.*$"
 color red "//("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
+color red "/\*("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*\*/"
 
 # Multiline comments.
-color red start="/\*" end="\*/"
+color red start="^ */\*" end="\*/ *$"
 
 # Multiline strings.
 icolor green start="`" end="`"

@@ -4,23 +4,23 @@ syntax toml "\.toml$"
 
 comment "# "
 
-# Strings.
-color green ""([^"\]|\\.)*""
-color green "'([^'\]|\\.)*'"
-
-# Keys.
-icolor blue "^ *[0-9a-z_-]+(\.[0-9a-z_-]+)* *="
-icolor blue "^ *"([^"\]|\\.)*"[ ]*="
-icolor blue "^ *'([^"\]|\\.)*' *="
-
-# Sections.
-icolor magenta "^ *\[+.+\]+"
-
 # Booleans.
 color yellow "\<(true|false)\>"
 
 # Numbers.
 icolor yellow "[+-]?[0-9]+(\.[0-9]+)?(e[+-]?[0-9]+)?"
+
+# Strings.
+color green ""([^"\]|\\.)*""
+color green "'([^'\]|\\.)*'"
+
+# Keys.
+icolor blue "^ *[0-9a-z_-]+( *\. *[0-9a-z_-]+)* *="
+color blue "^ *"([^"\]|\\.)*"[ ]*="
+color blue "^ *'([^"\]|\\.)*' *="
+
+# Sections.
+icolor magenta "^ *\[+.+\]+"
 
 # Comments.
 color red "^ *#.*$"
