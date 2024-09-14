@@ -2,6 +2,8 @@
 
 . Test
 
+:
+
 [ Test ]
 
 alias

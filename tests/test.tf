@@ -18,14 +18,23 @@ true
 
 // comment
 
+
 test # comment
 
 test # "comment"
 
 test // comment
 
-test /*
-comment
-*/ test
+test /* comment */ test
+
+"/* not a comment" test
+
+test
+/*
+multiline comment
+*/
+test
 
 bug # "comment
+
+bug "/* not a comment */"

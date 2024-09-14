@@ -2,6 +2,8 @@ key = test
 
 key.key = test
 
+key . key = test
+
 "key" = test
 
 "" = test

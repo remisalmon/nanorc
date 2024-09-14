@@ -53,6 +53,8 @@ test: [
 
 # "comment"
 
+# "comment
+
 test # comment
 
 test # "comment"
