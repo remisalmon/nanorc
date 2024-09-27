@@ -26,12 +26,11 @@ test `\` test
 
 test `` test
 
-test `multiline string` test
-
-test `multiline
-string` test
-
+test:=`multiline
+string`
 test
+
+test:=
 `
 multiline string
 `
@@ -57,17 +56,15 @@ test
 
 test "string // not a comment" test
 
-test `multiline
-// not a comment
-string` test
-
-test `multiline
+bug=`multiline
 /* not a comment
 */
-string` test
+string`
 
 bug // "comment
 
 bug "/* not a comment */"
 
-bug "`" not a string
+test:=`
+bug=`
+test

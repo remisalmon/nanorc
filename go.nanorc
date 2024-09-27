@@ -16,7 +16,6 @@ color magenta "\<(uint|uint8|uint16|uint32|uint64|uintptr)\>"
 # Constants.
 color yellow "\<(true|false|iota)\>"
 color yellow "\<(nil)\>"
-
 icolor yellow "'([^'\]|\\.)*'"
 
 # Functions.
@@ -31,17 +30,20 @@ icolor yellow "\<0x(_?[0-9a-f]+)+\>"
 
 # Strings.
 icolor green ""([^"\]|\\.)*""
+icolor green "`[^`]*`"
 
 # Comments.
 color red "^ *//.*$"
 color red "//("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 color red "/\*("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*\*/"
 
+# Multiline strings.
+icolor green start="(^|=) *`" end="(^|[^`])` *$"
+color normal "= *`"
+color green "`"
+
 # Multiline comments.
 color red start="^ */\*" end="\*/ *$"
-
-# Multiline strings.
-icolor green start="`" end="`"
 
 # Trailing whitespaces.
 color ,green " +$"
