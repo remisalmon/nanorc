@@ -31,7 +31,7 @@ color blue "[()]"
 color blue "[{},]"
 
 # Shell Parameter Expansion.
-icolor yellow "\$\{[^}]+\}"
+color yellow "\$\{[^}]+\}"
 
 # Command and Process Substitution.
 color blue "`"

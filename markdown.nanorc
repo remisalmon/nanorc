@@ -36,7 +36,7 @@ color yellow "`[^`]+`"
 color yellow "<[^>]+>"
 
 # Comments.
-color red start="<!--" end="-->"
+color red start="^ *<!--" end="--> *$"
 
 # Trailing whitespaces.
 color ,green " +$"

@@ -16,7 +16,7 @@ icolor blue "^ *[a-z_-][0-9a-z_-]* *["{]"
 color normal "[={]"
 
 # Strings.
-icolor green ""([^"\]|\\.)*""
+color green ""([^"\]|\\.)*""
 
 # Comments.
 color red "^ *(#|//).*$"

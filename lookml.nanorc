@@ -9,7 +9,7 @@ icolor yellow "\<[+-]?[0-9]+(\.[0-9]*)?(e[+-]?[0-9]+)?\>"
 color yellow "\<(yes|no)\>"
 
 # Variables.
-icolor magenta "\$\{[^}]*\}"
+color magenta "\$\{[^}]*\}"
 
 # SQL.
 color red ";;"
@@ -23,7 +23,7 @@ color red "^ *#.*$"
 color red "#("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 
 # Multiline strings.
-color green start="^ *([0-9a-z_]+ *: *)?"([^"\]|\\.)?" end="""
+color green start="^ *([0-9a-z_]+ *: *)?"([^"\]|\\.)*$" end="^([^"\]|\\.)*""
 
 # Keywords.
 color blue "^ *(- +)?[0-9a-z_]+ *:"

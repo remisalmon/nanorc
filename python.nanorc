@@ -42,8 +42,8 @@ color red "^ *#.*$"
 color red "#("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 
 # Multiline strings.
-icolor green start="r?[bf]?"""([^"\]|\\.)?" end="""""
-icolor green start="r?[bf]?'''([^'\]|\\.)?" end="'''"
+icolor green start="r?[bf]?"""" end="(^|[^"\]|\\.)""""
+icolor green start="r?[bf]?'''" end="(^|[^'\]|\\.)'''"
 
 # Trailing whitespaces.
 color ,green " +$"

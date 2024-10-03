@@ -14,21 +14,21 @@ icolor yellow "[+-]?[0-9]+(\.[0-9]+)?(e[+-]?[0-9]+)?"
 color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
 
+# Multiline strings.
+color green start="^.+= *"""([^"\]|\\.)*$" end="^([^"\]|\\.)*""""
+color green start="^.+= *'''([^'\]|\\.)*$" end="^([^'\]|\\.)*'''"
+
 # Keys.
 icolor blue "^ *[0-9a-z_-]+( *\. *[0-9a-z_-]+)* *="
 color blue "^ *"([^"\]|\\.)*"[ ]*="
 color blue "^ *'([^"\]|\\.)*' *="
 
 # Sections.
-icolor magenta "^ *\[+.+\]+"
+color magenta "^ *\[+.+\]+"
 
 # Comments.
 color red "^ *#.*$"
 color red "#("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
-
-# Multiline strings.
-icolor green start=""""([^"\]|\\.)?" end="""""
-icolor green start="'''([^'\]|\\.)?" end="'''"
 
 # Trailing whitespaces.
 color ,green " +$"

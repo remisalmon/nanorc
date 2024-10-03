@@ -21,7 +21,7 @@ color green "'([^'\]|\\.)*'"
 color red "^<\?xml.*\?> *$"
 
 # Comments.
-color red start="<!--" end="-->"
+color red start="^ *<!--" end="--> *$"
 
 # Trailing whitespaces.
 color ,green " +$"

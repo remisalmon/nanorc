@@ -18,7 +18,7 @@ color red "^ *--.*$"
 color red "--('([^'\]|\\.)*'|[^'])*$"
 
 # Multiline comments.
-color red start="/\*" end="\*/"
+color red start="^ */\*" end="\*/ *$"
 
 # Trailing whitespaces.
 color ,green " +$"

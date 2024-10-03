@@ -16,7 +16,6 @@ color magenta "\<(uint|uint8|uint16|uint32|uint64|uintptr)\>"
 # Constants.
 color yellow "\<(true|false|iota)\>"
 color yellow "\<(nil)\>"
-icolor yellow "'([^'\]|\\.)*'"
 
 # Functions.
 color magenta "\<(append|cap|clear|close|complex|copy|delete|imag|len)\>"
@@ -28,19 +27,23 @@ icolor yellow "\<0b(_?[0-1]+)+\>"
 icolor yellow "\<0o(_?[0-7]+)+\>"
 icolor yellow "\<0x(_?[0-9a-f]+)+\>"
 
+# Multiline strings.
+color green start="^([^"'`]+=)? *`[^`]*$" end="^[^`]*`"
+color normal "^([^"'`]+=) *`"
+color green "`"
+color blue "\<(const|var)\>"
+
+# Runes.
+color yellow "'([^'\]|\\.)*'"
+
 # Strings.
-icolor green ""([^"\]|\\.)*""
-icolor green "`[^`]*`"
+color green ""([^"\]|\\.)*""
+color green "`[^`]*`"
 
 # Comments.
 color red "^ *//.*$"
 color red "//("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 color red "/\*("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*\*/"
-
-# Multiline strings.
-icolor green start="(^|=) *`" end="(^|[^`])` *$"
-color normal "= *`"
-color green "`"
 
 # Multiline comments.
 color red start="^ */\*" end="\*/ *$"
