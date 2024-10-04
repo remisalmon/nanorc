@@ -13,23 +13,18 @@ color red "^%YAML 1\.[0-2] *$"
 color blue "^---( |$)"
 color blue "^\.\.\.( |$)"
 
-# Maps.
-icolor blue "[0-9a-z_]+[0-9a-z_ -]*:( |$)"
-#color blue "(^ *|[:-] )\{+"
-#color blue "\}+$"
-
-# Lists.
-color blue "^ *(- )+"
-#color blue "(^ *|[:-] )\[+"
-#color blue "\]+$"
-color normal ":"
-
 # Constants.
 icolor yellow "\<(null|true|false)\>"
 
 # Strings.
 color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
+
+# Maps.
+color blue "^ *(- )*([^"'{[]+|"([^"\]|\\.)*"|'([^'\]|\\.)*'):( |$)"
+
+# Lists.
+color blue "^ *(- )+"
 
 # Comments.
 color red "^ *#.*$"

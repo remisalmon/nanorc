@@ -15,16 +15,14 @@ color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
 
 # Multiline strings.
-color green start="^.+= *"""([^"\]|\\.)*$" end="^([^"\]|\\.)*""""
-color green start="^.+= *'''([^'\]|\\.)*$" end="^([^'\]|\\.)*'''"
+color green start="^.+= *"""" end="(^|[^"\]|\\.)""""
+color green start="^.+= *'''" end="(^|[^'\]|\\.)'''"
 
 # Keys.
-icolor blue "^ *[0-9a-z_-]+( *\. *[0-9a-z_-]+)* *="
-color blue "^ *"([^"\]|\\.)*"[ ]*="
-color blue "^ *'([^"\]|\\.)*' *="
+icolor blue "^ *([0-9a-z_-]+|"([^"\]|\\.)*"|'([^'\]|\\.)*')( *\. *([0-9a-z_-]+|"([^"\]|\\.)*"|'([^'\]|\\.)*'))* *="
 
-# Sections.
-color magenta "^ *\[+.+\]+"
+# Tables.
+icolor magenta "^ *\[+([0-9a-z_-]+|"([^"\]|\\.)*"|'([^'\]|\\.)*')( *\. *([0-9a-z_-]+|"([^"\]|\\.)*"|'([^'\]|\\.)*'))*\]+"
 
 # Comments.
 color red "^ *#.*$"
