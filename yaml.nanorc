@@ -7,7 +7,7 @@ header "^%YAML 1\.[0-2] *$"
 comment "# "
 
 # Headers.
-color red "^%YAML 1\.[0-2] *$"
+color red "^%YAML 1\.[0-9]( |$)"
 
 # Separators.
 color blue "^---( |$)"
@@ -21,7 +21,7 @@ color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
 
 # Maps.
-color blue "^ *(- )*([^"'{[]+|"([^"\]|\\.)*"|'([^'\]|\\.)*'):( |$)"
+color blue "^ *(- )*([^]@`,[{}"']+|"([^"\]|\\.)*"|'([^'\]|\\.)*'):( |$)"
 
 # Lists.
 color blue "^ *(- )+"
