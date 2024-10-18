@@ -1,6 +1,6 @@
 # Syntax highlighting for Terraform.
 
-syntax terraform "\.tf(vars)?$"
+syntax terraform "\.(tf(vars)?|hcl)$"
 
 comment "# "
 
