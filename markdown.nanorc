@@ -4,6 +4,8 @@ syntax markdown "\.md$"
 
 comment "<!--|-->"
 
+tabgives "    "
+
 # Headers.
 color blue "^#+ .+$"
 color blue "^(=+|-+)$"

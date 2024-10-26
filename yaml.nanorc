@@ -6,6 +6,8 @@ header "^%YAML 1\.[0-2] *$"
 
 comment "# "
 
+tabgives "  "
+
 # Headers.
 color red "^%YAML 1\.[0-9]( |$)"
 

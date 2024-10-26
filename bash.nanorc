@@ -6,6 +6,8 @@ header "^#!.*/(env +)?bash( |$)"
 
 comment "#"
 
+tabgives "  "
+
 # Builtin Commands.
 color magenta "\. "
 color magenta ":( |$)"

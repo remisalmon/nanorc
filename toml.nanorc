@@ -4,6 +4,8 @@ syntax toml "\.toml$"
 
 comment "# "
 
+tabgives "  "
+
 # Booleans.
 color yellow "\<(true|false)\>"
 

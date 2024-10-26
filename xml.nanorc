@@ -6,6 +6,8 @@ header "^<\?xml.*\?> *$"
 
 comment "<!--|-->"
 
+tabgives "    "
+
 # Elements.
 color blue "(<[^> ]+|/?>)"
 color normal "[</>]"

@@ -4,6 +4,8 @@ syntax default
 
 comment "#"
 
+tabgives "	"
+
 # Strings.
 color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"

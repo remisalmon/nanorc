@@ -6,6 +6,8 @@ header "^#!.*/(env +)?fish( |$)"
 
 comment "# "
 
+tabgives "    "
+
 # Commands.
 color magenta "\<(_|abbr|alias|and|argparse|begin|bg|bind|block|break|breakpoint|builtin|case|cd|cdh|command|commandline|complete|contains|continue|count|dirh|dirs|disown|echo|else|emit|end|eval|exec|exit|false|fg|fish|fish_add_path|fish_breakpoint_prompt|fish_clipboard_copy|fish_clipboard_paste|fish_command_not_found|fish_config|fish_default_key_bindings|fish_delta|fish_git_prompt|fish_greeting|fish_hg_prompt|fish_indent|fish_is_root_user|fish_key_reader|fish_mode_prompt|fish_opt|fish_prompt|fish_right_prompt|fish_status_to_signal|fish_svn_prompt|fish_title|fish_update_completions|fish_vcs_prompt|fish_vi_key_bindings|for|funced|funcsave|function|functions|help|history|if|isatty|jobs|math|nextd|not|open|or|path|popd|prevd|printf|prompt_hostname|prompt_login|prompt_pwd|psub|pushd|pwd|random|read|realpath|return|set|set_color|source|status|string|string collect|string escape|string join|string join0|string length|string lower|string match|string pad|string repeat|string replace|string shorten|string split|string split0|string sub|string trim|string unescape|string upper|suspend|switch|test|time|trap|true|type|ulimit|umask|vared|wait|while)\>"
 color normal "\.fish"

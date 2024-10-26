@@ -4,6 +4,8 @@ syntax dockerfile "Dockerfile$"
 
 comment "# "
 
+tabgives "    "
+
 # Instructions.
 icolor blue "^(ADD|ARG|CMD|COPY|ENTRYPOINT|ENV|EXPOSE|FROM|HEALTHCHECK|LABEL|MAINTAINER|ONBUILD|RUN|SHELL|STOPSIGNAL|USER|VOLUME|WORKDIR) "
 icolor blue " AS "

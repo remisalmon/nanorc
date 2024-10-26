@@ -4,6 +4,8 @@ syntax lookml "\.l(oo)?kml$"
 
 comment "# "
 
+tabgives "  "
+
 # Numbers and constants.
 icolor yellow "\<[+-]?[0-9]+(\.[0-9]*)?(e[+-]?[0-9]+)?\>"
 color yellow "\<(yes|no)\>"

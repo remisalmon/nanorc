@@ -2,6 +2,8 @@
 
 syntax tsv "\.tsv$"
 
+tabgives "	"
+
 # Comas.
 color ,magenta "	"
 

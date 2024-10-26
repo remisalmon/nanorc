@@ -2,6 +2,8 @@
 
 syntax csv "\.csv$"
 
+tabgives "	"
+
 # Comas.
 color magenta ","
 
