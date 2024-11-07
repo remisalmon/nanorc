@@ -29,14 +29,17 @@ icolor yellow "\<0b(_?[0-1]+)+\>"
 icolor yellow "\<0o(_?[0-7]+)+\>"
 icolor yellow "\<0x(_?[0-9a-f]+)+\>"
 
-# Multiline strings.
-color green start="^([^"'`]+=)? *`[^`]*$" end="^[^`]*`"
-color normal "^([^"'`]+=) *`"
-color green "`"
-color blue "\<(const|var)\>"
-
 # Runes.
-color yellow "'([^'\]|\\.)*'"
+color yellow "'(\\[xuU]?[0-9A-Fa-f]{2,8}|\\[abfnrtv\']|[^\'])'"
+
+# Multiline strings.
+color green start="^("([^"\]|\\.)*"|`[^`]*`|[^"`]|)+[=+]\s*`[^`]*$" end="`"
+color normal "^("([^"\]|\\.)*"|`[^`]*`|[^"`])+[=+]\s*`"
+color blue "^\s*\<(const|var)\>"
+color green "`"
+color yellow "'`'"
+
+color green start="^[^`=+]*`[^`]*\+\s*`[^`]*$" end="`"
 
 # Strings.
 color green ""([^"\]|\\.)*""
@@ -44,8 +47,7 @@ color green "`[^`]*`"
 
 # Comments.
 color red "^\s*//.*$"
-color red "//("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
-color red "/\*("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*\*/"
+color red "//("([^"\]|\\.)*"|'([^'\]|\\.)*'|`[^`]*`|[^"'`])*$"
 
 # Multiline comments.
 color red start="^\s*/\*" end="\*/\s*$"
