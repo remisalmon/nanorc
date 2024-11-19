@@ -15,8 +15,12 @@ color red "^%YAML 1\.[0-9]( |$)"
 color blue "^---( |$)"
 color blue "^\.\.\.( |$)"
 
-# Constants.
-icolor yellow "\<(null|true|false)\>"
+# Core Schema.
+color yellow "\<(null|Null|NULL|~|true|True|TRUE|false|False|FALSE)\>"
+color yellow "(\.nan|\.NaN|\.NAN)"
+color yellow "[+-]?([0-9]+|(\.[0-9]+|[0-9]+(\.[0-9]*)?)([eE][-+]?[0-9]+)?)"
+color yellow "[+-]?(\.inf|\.Inf|\.INF)"
+color yellow "(0o[0-7]+|0x[0-9a-fA-F]+)"
 
 # Strings.
 color green ""([^"\]|\\.)*""
@@ -27,6 +31,9 @@ color blue "^ *(- )*([^]@`,[{}"']+|"([^"\]|\\.)*"|'([^'\]|\\.)*'):( |$)"
 
 # Lists.
 color blue "^ *(- )+"
+
+# Block Scalars.
+color magenta " [|>][+-]?[1-9]? *$"
 
 # Comments.
 color red "^ *#.*$"
