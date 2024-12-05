@@ -28,6 +28,11 @@ icolor yellow "\{\$[0-9a-z_]+\}"
 color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
 
+# Multiline strings.
+color green start="^ *(set +[0-9A-Za-z_]+|echo) +"" end="(^|[^"\]|\\.)""
+color normal "^ *set +[0-9A-Za-z_]+ "
+color magenta "\<(set|echo)\>"
+
 # Comments.
 color red "^ *#.*$"
 color red "[ ]#("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"

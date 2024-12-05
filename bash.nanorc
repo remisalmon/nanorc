@@ -15,12 +15,10 @@ color magenta "(\[ | \])"
 color magenta "\<(alias|bg|bind|break|builtin|caller|cd|command|compgen|complete|compopt|continue|declare|dirs|disown|echo|enable|eval|exec|exit|export|fc|fg|getopts|hash|help|history|jobs|kill|let|local|logout|mapfile|popd|printf|pushd|pwd|read|readarray|readonly|return|set|shift|shopt|source|suspend|test|times|trap|type|typeset|ulimit|umask|unalias|unset|wait)\>"
 
 # Reserved Words.
-color blue "! "
-color blue "(\[\[ |\{ | \]\]| \})"
+color blue "(! |\[\[ | \]\]|\{ |; \})"
 color blue "\<(case|do|done|elif|else|esac|fi|for|function|if|in|select|then|time|until|while)\>"
 
 # Parameter and Variable Index.
-icolor yellow "\$[a-z_]+[0-9a-z_]*"
 color yellow "\$[!#$*0?@_-]"
 
 # Pipelines and Operators.
@@ -33,6 +31,7 @@ color blue "[()]"
 color blue "[{},]"
 
 # Shell Parameter Expansion.
+icolor yellow "\$[a-z_][0-9a-z_]*"
 color yellow "\$\{[^}]+\}"
 
 # Command and Process Substitution.
@@ -45,6 +44,11 @@ color blue "(\$\(\(|\)\))"
 # Strings.
 color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
+
+# Multiline strings.
+color green start="^ *([A-Za-z_][0-9A-Za-z_]*=|echo +)"" end="(^|[^"\]|\\.)""
+color normal "^ *[A-Za-z_][0-9A-Za-z_]*="
+color magenta "\<echo\>"
 
 # Comments.
 color red "^ *#.*$"
