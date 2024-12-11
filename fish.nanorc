@@ -29,8 +29,8 @@ color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
 
 # Multiline strings.
-color green start="^ *(set +[0-9A-Za-z_]+|echo) +"" end="(^|[^"\]|\\.)""
-color normal "^ *set +[0-9A-Za-z_]+ "
+color green start="^ *(set( +--?[ULa-z]+)* +[0-9A-Za-z_]+|echo( +-[nsEe]+)*) +"" end="(^|[^"\]|\\.)""
+color normal "^ *(set( +--?[ULa-z]+)* +[0-9A-Za-z_]+|echo( +-[nsEe]+)*) +"
 color magenta "\<(set|echo)\>"
 
 # Comments.

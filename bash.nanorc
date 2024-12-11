@@ -46,8 +46,8 @@ color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
 
 # Multiline strings.
-color green start="^ *([A-Za-z_][0-9A-Za-z_]*=|echo +)"" end="(^|[^"\]|\\.)""
-color normal "^ *[A-Za-z_][0-9A-Za-z_]*="
+color green start="^ *([A-Za-z_][0-9A-Za-z_]*=|echo( +-[neE]+)* +)"" end="(^|[^"\]|\\.)""
+color normal "^ *([A-Za-z_][0-9A-Za-z_]*=|echo( +-[neE]+)* +)"
 color magenta "\<echo\>"
 
 # Comments.
