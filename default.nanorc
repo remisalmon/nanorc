@@ -10,8 +10,11 @@ tabgives "	"
 color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
 
+# Ini.
+color blue "^\s*\[[^]]+\]"
+
 # Comments.
-color red "^ *#.*$"
+color red "^\s*#.*$"
 
 # Tabs.
 color ,red "	"
