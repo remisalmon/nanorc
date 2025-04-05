@@ -1,25 +1,25 @@
 -- Keywords.
-abs text
+abs
 
 -- Identifiers.
-"test" text
+"test"
 
 -- Strings.
-'test' text
-'\'' text
-'\\' text
-'' text
+'test'
+'\''
+'\\'
+''
 
 -- Comments.
--- comment
--- "comment"
--- "comment
+-- test
+-- "test"
+-- "test
 
-text -- comment
-text -- "comment"
+text -- test
+text -- "test"
 
 -- Multiline comments.
 /*
-comment
+test
 */
 text

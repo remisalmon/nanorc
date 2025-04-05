@@ -1,12 +1,12 @@
 // Keywords.
-break test
+break
 
 // Identifiers.
-any text
+any
 
-true text
+true
 
-nil text
+nil
 
 // Integer literals.
 42
@@ -70,14 +70,14 @@ nil text
 '\''         // rune literal containing single quote character
 
 // String literals.
-"test" text
-"\"" text
-"\\" text
-"" text
+"test"
+"\""
+"\\"
+""
 
-`test` text
-`\` text
-`` text
+`test`
+`\`
+``
 
 // Multiline strings.
 text := `test

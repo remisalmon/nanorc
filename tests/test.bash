@@ -5,7 +5,7 @@
 
 [ text ]
 
-alias text
+alias
 
 # Reserved Words.
 ! text
@@ -14,7 +14,7 @@ alias text
 
 { text; }
 
-case text
+case
 
 # Parameter and Variable Index.
 $!
@@ -23,9 +23,9 @@ $!
 text || text
 
 # Shell Expansions.
-echo text{text,text}text
+text{text,text}text
 
-~
+~ text
 
 ${parameter:-word}
 
@@ -39,14 +39,14 @@ $(( text ))
 >(text)
 
 # Strings.
-"test" text
-"\"" text
-"\\" text
-"" text
+"test"
+"\""
+"\\"
+""
 
-'test' text
-'\' text
-'' text
+'test'
+'\'
+''
 
 # Multiline strings.
 echo -n "test

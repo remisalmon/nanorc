@@ -5,9 +5,3 @@ true
 "test"
 
 {"test": "test"}
-
-{
-  "test": "test"
-}
-
-{"key": "test", "key": "test"}

@@ -7,26 +7,34 @@ comment "# "
 tabgives "  "
 
 # Booleans.
+# https://toml.io/en/v1.0.0#boolean
 color yellow "\<(true|false)\>"
 
 # Numbers.
+# https://toml.io/en/v1.0.0#integer
+# https://toml.io/en/v1.0.0#float
 icolor yellow "[+-]?[0-9]+(\.[0-9]+)?(e[+-]?[0-9]+)?"
 
 # Strings.
+# https://toml.io/en/v1.0.0#string
 color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
 
 # Multiline strings.
+# https://toml.io/en/v1.0.0#string
 color green start="^.+= *"""" end="(^|[^"\]|\\.)""""
 color green start="^.+= *'''" end="(^|[^'\]|\\.)'''"
 
 # Keys.
+# https://toml.io/en/v1.0.0#keys
 icolor blue "^ *([0-9a-z_-]+|"([^"\]|\\.)*"|'([^'\]|\\.)*')( *\. *([0-9a-z_-]+|"([^"\]|\\.)*"|'([^'\]|\\.)*'))* *="
 
 # Tables.
+# https://toml.io/en/v1.0.0#table
 icolor magenta "^ *\[+([0-9a-z_-]+|"([^"\]|\\.)*"|'([^'\]|\\.)*')( *\. *([0-9a-z_-]+|"([^"\]|\\.)*"|'([^'\]|\\.)*'))*\]+"
 
 # Comments.
+# https://toml.io/en/v1.0.0#comment
 color red "^ *#.*$"
 color red "#("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 

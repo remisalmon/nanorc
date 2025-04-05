@@ -1,60 +1,83 @@
-key = test
+# Booleans.
+true
 
-key.key = test
+# Numbers.
++1.1e-1
 
-key . key = test
+# Strings.
+"test"
+"\""
+"\\"
+""
 
-"key" = test
+'test'
+'\''
+'\\'
+''
 
-"key"."key" = test
+# Multiline strings.
+text = """test
+test"""
+text
 
-key."key" = test
+text = """
+test
+"""
+text
 
-key . "key" = test
+text = """
+"""
+text
 
-"" = test
+# Keys.
+test = text
 
-'key' = test
+test.test = text
 
-[table]
+test . test = text
 
-[table.table]
+"test" = text
 
-[[table]]
+"test"."test" = text
 
-["table"]
+test."test" = text
 
-[["table"]]
+test . "test" = text
 
-[table."table"]
+"" = text
 
-["table".table]
+'test' = text
 
-["table"."table"]
+# Tables.
+[test]
+
+[test.test]
+
+[[test]]
+
+["test"]
+
+[["test"]]
+
+[test."test"]
+
+["test".test]
+
+["test"."test"]
 
 [""]
 
 ["".""]
 
-true
+# Comments.
+# test
 
-+1.1e-1
+# "test"
 
-"string"
+# "test
 
-'string'
+text # test
 
-test = """multiline
-string"""
+text # "test"
 
-test= """
-multiline string
-"""
-
-# comment
-
-test # comment
-
-test # "comment"
-
-test # "bug
+text # "bug

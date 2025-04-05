@@ -1,6 +1,13 @@
 # YAML directives.
 %YAML 1.2
 
+# Core Schema.
+null
+.nan
+-1.0e+1
+-.inf
+0o0
+
 # Separators.
 text
 ---
@@ -8,54 +15,53 @@ text
 ...
 text
 
-# Core Schema.
-null text
-.nan text
--1.0e+1 text
--.inf text
-0o0 text
-
 # Scalars.
-"test" text
-"\"" text
-"\\" text
-"" text
+"test"
+"\""
+"\\"
+""
 
-'test' text
-'\'' text
-'\\' text
-'' text
+'test'
+'\''
+'\\'
+''
 
 test: "test
 test"
+text
 
 test: "
 test
 "
+text
 
 test: "test
 \""
+text
 
 test: "test
 \\"
+text
 
 test: "
 "
+text
 
 - test: "test
 test"
+text
 
 # Collections.
 test: text
+
 - test: text
 
-- test
+- text
 
 # Block scalars.
 test: |
   text
 
-# Comments.
 # Comments.
 # test
 # "test"

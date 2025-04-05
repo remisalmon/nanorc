@@ -1,8 +1,8 @@
 # Literal Values.
-true text
+true
 
 # Numeric literals.
-1.0e+1 text
+1.0e+1
 
 # Arguments.
 test = text
@@ -13,20 +13,20 @@ test {}
 test "test"
 
 # STrings.
-"test" text
-"\"" text
-"\\" text
-"" text
+"test"
+"\""
+"\\"
+""
 
 # Comments.
-# comment
-# "comment"
-# "comment
+# test
+# "test"
+# "test
 
-// comment
+// test
 
-text # comment
-text # "comment"
+text # test
+text # "test"
 
 # Template Expressions.
 text <<EOF

@@ -1,12 +1,12 @@
 # Commands.
 _ text
 
-abbr text
+abbr
 
 source file.fish
 
 # Keywords.
-if text
+if
 
 # Parameter expansion.
 text*
@@ -15,21 +15,21 @@ text*
 
 text{text,text}text
 
-~
+~ text
 
 $variable
 {$variable}
 
 # Strings.
-"test" text
-"\"" text
-"\\" text
-"" text
+"test"
+"\""
+"\\"
+""
 
-'test' text
-'\'' text
-'\\' text
-'' text
+'test'
+'\''
+'\\'
+''
 
 # Multiline strings.
 echo -n "test

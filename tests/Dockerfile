@@ -14,6 +14,6 @@ ${variable:-word}
 ""
 
 # Comments.
-# comment
-# "comment"
-# "comment
+# test
+# "test"
+# "test

@@ -1,49 +1,51 @@
 # Numbers and constants.
--1.0e+1 text
+-1.0e+1
 
-yes text
+yes
 
 # Variables.
-${variable} text
+${variable}
 
 # SQL.
 text ;; text
 
 # Strings.
-"test" text
-"\"" text
-"\\" text
-"" text
+"test"
+"\""
+"\\"
+""
 
-'test' text
-'\'' text
-'\\' text
-'' text
+'test'
+'\''
+'\\'
+''
 
 # Comments.
-# comment
-# "comment"
-# "comment
+# test
+# "test"
+# "test
 
-text # comment
-text # "comment"
+text # test
+text # "test"
 
 # Multiline strings.
 text: "test
 test"
-test
+text
 
 test:
 "
 test
 "
-test
+text
 
 test: "
-\"" test
+\""
+text
 
 test: "
-\\" test
+\\"
+text
 
 # Keywords.
 test: text

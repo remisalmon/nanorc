@@ -1,106 +1,65 @@
-test int test
+# Keywords.
+and
 
-test int() test
+# Built-in Constants.
+False
 
-test test.int() test
+# Built-in Exception.
+BaseException
+
+ArithmeticError
+
+Warning
+
+# Built-in Functions.
+abs()
+
+abs.test()
+
+# Built-in Types.
+bool
+
+# Functions and Classes.
+def test()
+
+class test:
 
 @test
 
-@test()
+# Numbers.
+-1_0.0_0E+0j
 
-@test.test()
+# Strings.
+"test"
+"\""
+"\\"
+""
 
-def test():
+'test'
+'\''
+'\\'
+''
 
-def __test__():
+# Comments.
+# test
+text # test
+text # "test"
 
-class Test:
+# Multiline strings.
+"""test
+"""
+text
 
-class Test(Test):
-
-test False test
-
-test 1_0.0_0E+0j test
-
-test BaseException test
-
-test "string" test
-
-test "\"" test
-
-test "\\" test
-
-test "" test
-
-test r"string" test
-
-test b"string" test
-
-test f"string" test
-
-test rb"string" test
-
-test rf"string" test
-
-test """string"""
-
-test = """multiline
-string"""
-test
-
-test = """
-multiline string
 """
 test
-
-test
-"""multiline
-string
 """
+text
 
-test
-"""
-multiline string
-"""
-test
-
-test = """
-"""
-test
-
-test
 """
 """
-test
+text
 
-test 'string' test
+# BUGS
+text # "bug
 
-# comment
-
-# "comment"
-
-# "comment
-
-test # comment
-
-test#comment
-
-test # "comment"
-
-test "string # not a comment" test
-
-test = """multiline
-# not a comment
-string
-"""
-test
-
-bug # "comment
-
-test = "'''" bug
-'''
-
-x="""
-'''
-"""
-bug
+"""'''""" bug
