@@ -1,11 +1,18 @@
+<!--Tags and Elements.-->
+<test>test</test>
+
+<test/>
+
+<!--Attributes.-->
+<test test=text>
+
+<!--Strings.-->
+<test>"test"</test>
+
+<test test="test">
+
+<!--Headers.-->
 <?xml header?>
 
-<element>test</element>
-
-<element/>
-
-<test attribute=test>
-
-test "string" test
-
+<!--Comments.-->
 <!--comment-->

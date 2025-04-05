@@ -8,11 +8,13 @@ comment "<!--|-->"
 
 tabgives "    "
 
-# Elements.
+# Tags.
+# https://www.w3.org/TR/REC-xml/#sec-starttags
 color blue "(<[^> ]+|/?>)"
 color normal "[</>]"
 
 # Attributes.
+# https://www.w3.org/TR/REC-xml/#sec-starttags
 color magenta " [^<=]+="
 
 # Strings.
@@ -20,9 +22,11 @@ color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
 
 # Headers.
+# https://www.w3.org/TR/REC-xml/#sec-rmd
 color red "^<\?xml.*\?> *$"
 
 # Comments.
+# https://www.w3.org/TR/REC-xml/#sec-comments
 color red start="^ *<!--" end="--> *$"
 
 # Trailing whitespaces.
