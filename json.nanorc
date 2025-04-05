@@ -4,14 +4,16 @@ syntax json "\.jsonl?$"
 
 tabgives "  "
 
-# Numbers and constants.
-icolor yellow "-?[0-9]+(\.[0-9]+)?(e[+-]?[0-9]+)?"
+# Values and numbers.
+# https://www.json.org/json-en.html
 color yellow "\<(true|false|null)\>"
+icolor yellow "-?[0-9]+(\.[0-9]+)?(e[+-]?[0-9]+)?"
 
 # Strings.
 color green ""([^"\]|\\.)*""
 
 # Keys.
+# https://www.json.org/json-en.html
 color blue ""([^"\]|\\.)*"[ ]*:"
 
 # Trailing whitespaces.

@@ -1,4 +1,4 @@
-# Syntax highlighting for Terraform.
+# Syntax highlighting for Terraform files.
 
 syntax terraform "\.(tf(vars)?|hcl)$"
 
@@ -7,13 +7,19 @@ comment "# "
 tabgives "  "
 
 # Literal Values.
-icolor yellow "\<[0-9]+(\.[0-9])?(e[+-]?[0-9]+)?\>"
+# https://github.com/hashicorp/hcl/blob/main/hclsyntax/spec.md#literal-values
 color yellow "\<(true|false|null)\>"
 
+# Numeric literals.
+# https://github.com/hashicorp/hcl/blob/main/hclsyntax/spec.md#numeric-literals
+icolor yellow "\<[0-9]+(\.[0-9])?(e[+-]?[0-9]+)?\>"
+
 # Arguments.
+# https://developer.hashicorp.com/terraform/language/syntax/configuration#arguments
 icolor magenta "^ *[a-z_-][0-9a-z_-]* *="
 
 # Blocks.
+# https://developer.hashicorp.com/terraform/language/syntax/configuration#blocks
 icolor blue "^ *[a-z_-][0-9a-z_-]* *["{]"
 color normal "[={]"
 
@@ -21,13 +27,16 @@ color normal "[={]"
 color green ""([^"\]|\\.)*""
 
 # Comments.
+# https://developer.hashicorp.com/terraform/language/syntax/configuration#comments
 color red "^ *(#|//).*$"
 color red "(#|//)("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 
 # Template Expressions.
+# https://github.com/hashicorp/hcl/blob/main/hclsyntax/spec.md#template-expressions
 color normal start="<<-?EO." end="EO."
 
 # Multiline Comments.
+# https://developer.hashicorp.com/terraform/language/syntax/configuration#comments
 color red start="^ */\*" end="\*/ *$"
 
 # Trailing whitespaces.

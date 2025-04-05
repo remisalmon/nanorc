@@ -1,15 +1,19 @@
-FROM test AS test
+# Instructions.
+ADD text
 
-test $variable test
+FROM text AS text
 
-test ${variable:-} test
+# Environment variables.
+$variable
+${variable:-word}
 
-test "string" test
+# Strings.
+"test"
+"\""
+"\\"
+""
 
-test " AS " test
-
+# Comments.
 # comment
-
 # "comment"
-
 # "comment

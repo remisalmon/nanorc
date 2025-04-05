@@ -1,4 +1,4 @@
-# Syntax highlighting for LookML.
+# Syntax highlighting for LookML files.
 
 syntax lookml "\.l(oo)?kml$"
 

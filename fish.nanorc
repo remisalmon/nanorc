@@ -1,4 +1,4 @@
-# Syntax highlighting for fish scripts.
+# Syntax highlighting for fish files.
 
 syntax fish "\.fish$"
 
@@ -9,18 +9,35 @@ comment "# "
 tabgives "    "
 
 # Commands.
+# https://fishshell.com/docs/current/commands.html
 color magenta "\<(_|abbr|alias|and|argparse|begin|bg|bind|block|break|breakpoint|builtin|case|cd|cdh|command|commandline|complete|contains|continue|count|dirh|dirs|disown|echo|else|emit|end|eval|exec|exit|false|fg|fish|fish_add_path|fish_breakpoint_prompt|fish_clipboard_copy|fish_clipboard_paste|fish_command_not_found|fish_config|fish_default_key_bindings|fish_delta|fish_git_prompt|fish_greeting|fish_hg_prompt|fish_indent|fish_is_root_user|fish_key_reader|fish_mode_prompt|fish_opt|fish_prompt|fish_right_prompt|fish_status_to_signal|fish_svn_prompt|fish_title|fish_update_completions|fish_vcs_prompt|fish_vi_key_bindings|for|funced|funcsave|function|functions|help|history|if|isatty|jobs|math|nextd|not|open|or|path|popd|prevd|printf|prompt_hostname|prompt_login|prompt_pwd|psub|pushd|pwd|random|read|realpath|return|set|set_color|source|status|string|string collect|string escape|string join|string join0|string length|string lower|string match|string pad|string repeat|string replace|string shorten|string split|string split0|string sub|string trim|string unescape|string upper|suspend|switch|test|time|trap|true|type|ulimit|umask|vared|wait|while)\>"
+
 color normal "\.fish"
 
 # Keywords.
+# https://fishshell.com/docs/current/commands.html#keywords
 color blue "\<(if|else|end|for|in|while|break|continue|function|return|begin|and|or|not|switch|case|command|builtin|time|exec)\>"
-color blue "(&&|\|\|)"
+
+# Sperating characters.
+# https://fishshell.com/docs/current/language.html#job-control
+color blue "[;<>&|]"
 
 # Parameter expansion.
-color blue "[]*?(){,}[~]"
-color blue "\$\("
+# https://fishshell.com/docs/current/language.html#parameter-expansion
+# https://fishshell.com/docs/current/language.html#expand-wildcard
+color blue "[*?]"
 
-# Variable expansion.
+# https://fishshell.com/docs/current/language.html#expand-command-substitution
+color blue "(\$?\(|\))"
+
+# https://fishshell.com/docs/current/language.html#expand-brace
+color blue "[{,}]"
+
+# https://fishshell.com/docs/current/language.html#expand-home
+color blue "~"
+
+# https://fishshell.com/docs/current/language.html#expand-variable
+# https://fishshell.com/docs/current/language.html#shell-variables
 icolor yellow "\$[0-9a-z_]+"
 icolor yellow "\{\$[0-9a-z_]+\}"
 
@@ -29,12 +46,17 @@ color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
 
 # Multiline strings.
-color green start="^ *(set( +--?[ULa-z]+)* +[0-9A-Za-z_]+|echo( +-[nsEe]+)*) +"" end="(^|[^"\]|\\.)""
-color normal "^ *(set( +--?[ULa-z]+)* +[0-9A-Za-z_]+|echo( +-[nsEe]+)*) +"
+color green start="\<(set( +--?[ULa-z]+)* +[0-9A-Za-z_]+|echo( +-[nsEe]+)*) +"([^"]|\\")*\\?$" end="^([^"\]|\\.)*""
+color green start="\<(set( +--?[ULa-z]+)* +[0-9A-Za-z_]+|echo( +-[nsEe]+)*) +'([^']|\\')*\\?$" end="^([^'\]|\\.)*'"
+
+color normal "\<(set( +--?[ULa-z]+)* +[0-9A-Za-z_]+|echo( +-[nsEe]+)*) +"
+
 color magenta "\<(set|echo)\>"
 
 # Comments.
+# https://fishshell.com/docs/current/language.html#comments
 color red "^ *#.*$"
+
 color red "[ ]#("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 
 # Trailing whitespaces.

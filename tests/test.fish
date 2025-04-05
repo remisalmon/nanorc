@@ -1,51 +1,82 @@
-#!/usr/bin/env fish
+# Commands.
+_ text
 
-if
+abbr text
 
-Test && Test
+source file.fish
 
-Test**?
+# Keywords.
+if text
 
-(Test)
+# Parameter expansion.
+text*
 
-$(Test)
+(text)
 
-{Test,Test}
+text{text,text}text
 
-Test[0]
+~
 
-~/Test
+$variable
+{$variable}
 
-cd
+# Strings.
+"test" text
+"\"" text
+"\\" text
+"" text
 
-Test "string" Test
+'test' text
+'\'' text
+'\\' text
+'' text
 
-Test "\"" Test
+# Multiline strings.
+echo -n "test
+test"
+text
 
-Test "\\" Test
+echo -n "
+test
+"
+text
 
-Test "" Test
+echo -n "\
+test
+\""
+text
 
-Test 'string' Test
+echo -n "\
+test
+\\"
+text
 
-Test $variable Test
+echo -n 'test
+test'
+text
 
-Test {$variable} Test
+echo -n '
+test
+'
+text
 
-Test $cd Test
+echo -n '\
+test
+\''
+text
 
-# comment
+echo -n '\
+test
+\\'
+text
 
-# "comment"
+# Comments.
+# test
+# "test"
+# "test
 
-# "comment
+text # test
+text # "test"
 
-Test # comment
-
-Test # "comment"
-
-Test# not a comment
-
-Test "string # not a comment" Test
-
-bug # "comment
+# BUGS
+text # "bug

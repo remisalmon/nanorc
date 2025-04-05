@@ -1,22 +1,25 @@
-test select test
+-- Keywords.
+abs text
 
-test coalesce() test
+-- Identifiers.
+"test" text
 
-test "identifier" test
+-- Strings.
+'test' text
+'\'' text
+'\\' text
+'' text
 
-test 'string' test
-
+-- Comments.
 -- comment
+-- "comment"
+-- "comment
 
-test -- comment
+text -- comment
+text -- "comment"
 
-test--comment
-
-test /* comment
-*/ test
-
-test
+-- Multiline comments.
 /*
 comment
 */
-test
+text

@@ -6,7 +6,15 @@ key . key = test
 
 "key" = test
 
+"key"."key" = test
+
+key."key" = test
+
+key . "key" = test
+
 "" = test
+
+'key' = test
 
 [table]
 
@@ -34,10 +42,12 @@ true
 
 "string"
 
-"""multiline
+'string'
+
+test = """multiline
 string"""
 
-"""
+test= """
 multiline string
 """
 

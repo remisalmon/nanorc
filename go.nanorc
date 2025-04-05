@@ -6,50 +6,66 @@ comment "// "
 
 tabgives "	"
 
-# Reserved Keywords.
+# Keywords.
+# https://go.dev/ref/spec#Keywords
 color blue "\<(break|case|chan|const|continue|default|defer|else|fallthrough|for|func|go|goto|if|import|interface|map|package|range|return|select|struct|switch|type|var)\>"
 
-# Types.
+# Identifiers.
+# https://go.dev/ref/spec#Predeclared_identifiers
 color magenta "\<(any|bool|byte|comparable)\>"
 color magenta "\<(complex64|complex128|error|float32|float64)\>"
 color magenta "\<(int|int8|int16|int32|int64|rune|string)\>"
 color magenta "\<(uint|uint8|uint16|uint32|uint64|uintptr)\>"
 
-# Constants.
 color yellow "\<(true|false|iota)\>"
+
 color yellow "\<(nil)\>"
 
-# Functions.
-color magenta "\<(append|cap|clear|close|complex|copy|delete|imag|len)\>"
-color magenta "\<(make|max|min|new|panic|print|println|real|recover)\>"
+color magenta "\<(append|cap|clear|close|complex|copy|delete|imag|len|make|max|min|new|panic|print|println|real|recover)\>"
 
-# Numbers.
-icolor yellow "\<[0-9]+(_[0-9]+)*(\.[0-9]*(_[0-9]+)*)?(e[+-]?[0-9]+(_[0-9]+)*)?i?\>"
-icolor yellow "\<0b(_?[0-1]+)+\>"
-icolor yellow "\<0o(_?[0-7]+)+\>"
-icolor yellow "\<0x(_?[0-9a-f]+)+\>"
+# Integer literals.
+# https://go.dev/ref/spec#Integer_literals
+# Floating-point literals.
+# https://go.dev/ref/spec#Floating-point_literals
+# Imaginary literals.
+# https://go.dev/ref/spec#Imaginary_literals
+icolor yellow "\<([0-9]+(_[0-9]+)*)?(\.([0-9]+(_[0-9]+)*)?)?(e[+-]?[0-9]+(_[0-9]+)*)?i?\>"
 
-# Runes.
+icolor yellow "\<0b(_?[0-1]+)+i?\>"
+icolor yellow "\<0o(_?[0-7]+)+i?\>"
+icolor yellow "\<0x(_?[0-9a-f]+)*(\.(_?[0-9a-f]+)*)?([pe][+-]?[0-9]+(_[0-9]+)*)?i?\>"
+
+# Rune literals.
+# https://go.dev/ref/spec#Rune_literals
 color yellow "'(\\[xuU]?[0-9A-Fa-f]{2,8}|\\[abfnrtv\']|[^\'])'"
 
-# Multiline strings.
-color green start="^("([^"\]|\\.)*"|`[^`]*`|[^"`]|)+[=+]\s*`[^`]*$" end="`"
-color normal "^("([^"\]|\\.)*"|`[^`]*`|[^"`])+[=+]\s*`"
-color blue "^\s*\<(const|var)\>"
-color green "`"
-color yellow "'`'"
-
-color green start="^[^`=+]*`[^`]*\+\s*`[^`]*$" end="`"
-
-# Strings.
+# String literals.
+# https://go.dev/ref/spec#String_literals
 color green ""([^"\]|\\.)*""
+
 color green "`[^`]*`"
 
-# Comments.
-color red "^\s*//.*$"
-color red "//("([^"\]|\\.)*"|'([^'\]|\\.)*'|`[^`]*`|[^"'`])*$"
+# Multiline strings.
+color green start="^("([^"\]|\\.)*"|`[^`]*`|[^"`])+[=+]\s*`[^`]*$" end="^[^`]*`"
 
-# Multiline comments.
+color normal "^("([^"\]|\\.)*"|`[^`]*`|[^"`])+[=+]\s*`"
+
+color green "`"
+
+color blue "\<(const|var)\>"
+
+color green ""([^"\]|\\.)*""
+
+color green "`[^`]*`"
+
+color yellow "'`'"
+
+# Comments.
+# https://go.dev/ref/spec#Comments
+color red "^\s*//.*$"
+
+color red "//("([^"\]|\\.)*"|`[^`]*`|[^"`])*$"
+
 color red start="^\s*/\*" end="\*/\s*$"
 
 # Trailing whitespaces.

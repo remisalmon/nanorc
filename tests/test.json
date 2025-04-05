@@ -1,49 +1,13 @@
+true
+
 -1.0e+2
 
-null
+"test"
 
-"string"
-
-{"key": "test"}
+{"test": "test"}
 
 {
-  "key": "test"
-}
-
-{"key": {}}
-
-{"key": []}
-
-{"key": [{}]}
-
-{"key": [[]]}
-
-{
-  "key": {}
-}
-
-{
-  "key": []
-}
-
-{
-  "key": [{}]
-}
-
-{
-  "key": [[]]
+  "test": "test"
 }
 
 {"key": "test", "key": "test"}
-
-{
-  "key": "test",
-  "key": "test"
-}
-
-["test", "test"]
-
-[
-  "test",
-  "test"
-]

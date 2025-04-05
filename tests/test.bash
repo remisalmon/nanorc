@@ -1,65 +1,94 @@
-#!/usr/bin/env bash
+# Builtin Commands.
+. text
 
-. Test
+: text
 
-:
+[ text ]
 
-[ Test ]
+alias text
 
-alias
+# Reserved Words.
+! text
 
-! Reserved words
+[[ text ]]
 
-[[ Reserved words ]]
+{ text; }
 
-{ Test }
+case text
 
-case
-
-$variable
-
+# Parameter and Variable Index.
 $!
 
-Test | Test
+# Control operators.
+text || text
 
-(Grouping Commands)
+# Shell Expansions.
+echo text{text,text}text
 
-{Brace,Expansion}
+~
 
-${test:-}
+${parameter:-word}
 
-${test:0:1}
+$(text)
 
-`Command substitution`
+`text`
 
-$(Command substitution)
+$(( text ))
 
-<(Process Substitution)
+<(text)
+>(text)
 
-$((Arithmetic expansion))
+# Strings.
+"test" text
+"\"" text
+"\\" text
+"" text
 
-Test "string" Test
+'test' text
+'\' text
+'' text
 
-Test "" Test
+# Multiline strings.
+echo -n "test
+test"
+text
 
-Test "\"" Test
+echo -n "
+test
+"
+text
 
-Test "\\" Test
+echo -n "\
+test
+\""
+text
 
-Test 'string' Test
+echo -n "\
+test
+\\"
+text
 
-# comment
+echo -n 'test
+test'
+text
 
-# "comment"
+echo -n '
+test
+'
+text
 
-# "comment
+echo -n '\
+test
+\'
+text
 
-Test # comment
+# Comments.
+# test
+# "test"
+# "test
 
-Test # "comment"
+text # test
+text # "test"
 
-Test#not a comment
-
-Test "string # not a comment" Test
-
-bug # "comment
+# BUGS
+text # "bug

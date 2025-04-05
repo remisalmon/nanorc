@@ -1,4 +1,4 @@
-# Syntax highlighting for Dockerfile.
+# Syntax highlighting for Dockerfile files.
 
 syntax dockerfile "Dockerfile$"
 
@@ -7,18 +7,23 @@ comment "# "
 tabgives "    "
 
 # Instructions.
-icolor blue "^(ADD|ARG|CMD|COPY|ENTRYPOINT|ENV|EXPOSE|FROM|HEALTHCHECK|LABEL|MAINTAINER|ONBUILD|RUN|SHELL|STOPSIGNAL|USER|VOLUME|WORKDIR) "
+# https://docs.docker.com/reference/dockerfile/#overview
+icolor blue "^ *(ADD|ARG|CMD|COPY|ENTRYPOINT|ENV|EXPOSE|FROM|HEALTHCHECK|LABEL|MAINTAINER|ONBUILD|RUN|SHELL|STOPSIGNAL|USER|VOLUME|WORKDIR) "
+
 icolor blue " AS "
 
 # Environment variables.
+# https://docs.docker.com/reference/dockerfile/#environment-replacement
 icolor yellow "\$[0-9a-z_]+"
-icolor yellow "\$\{[0-9a-z_]+(:[+-][0-9a-z_]*)?\}"
+
+icolor yellow "\$\{[^}]+}"
 
 # Strings.
 color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
 
 # Comments.
+# https://docs.docker.com/reference/dockerfile/#format
 color red "^ *#.*$"
 
 # Trailing whitespaces.

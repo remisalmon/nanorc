@@ -1,28 +1,43 @@
-keyword: test
+# Numbers and constants.
+-1.0e+1 text
 
-  - keyword: test
+yes text
 
-test ${variable} test
+# Variables.
+${variable} text
 
-test 1.e+1 test
+# SQL.
+text ;; text
 
-test "string" test
+# Strings.
+"test" text
+"\"" text
+"\\" text
+"" text
 
-test "\"" test
+'test' text
+'\'' text
+'\\' text
+'' text
 
-test "\\" test
+# Comments.
+# comment
+# "comment"
+# "comment
 
-test "" test
+text # comment
+text # "comment"
 
-test 'string' test
-
-test: "multiline
-string" test
+# Multiline strings.
+text: "test
+test"
+test
 
 test:
 "
-multiline string
-" test
+test
+"
+test
 
 test: "
 \"" test
@@ -30,39 +45,10 @@ test: "
 test: "
 \\" test
 
-test: "
-" test
+# Keywords.
+test: text
 
-test: "multiline string" test
+  - test: text
 
-test: "" test
-
-test: "\"" test
-
-test: "\\" test
-
-test: test ;;
-
-test: "string".test ;;
-
-test: [
-  test: "string",
-]
-
-# comment
-
-# "comment"
-
-# "comment
-
-test # comment
-
-test # "comment"
-
-test "string # not a comment" test
-
-test: "multiline
-# not a comment
-string" test
-
+# BUGS
 bug # "comment

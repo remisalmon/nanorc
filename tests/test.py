@@ -42,10 +42,21 @@ test rb"string" test
 
 test rf"string" test
 
-test """multiline string""" test
+test """string"""
 
-test """multiline
-string""" test
+test = """multiline
+string"""
+test
+
+test = """
+multiline string
+"""
+test
+
+test
+"""multiline
+string
+"""
 
 test
 """
@@ -53,22 +64,9 @@ multiline string
 """
 test
 
-test """""""" test
-
-test """\"""" test
-
-test """\\""" test
-
-test """multiline
-string \"""" test
-
-test """multiline
-string \\""" test
-
-test """""" test
-
-test """
-""" test
+test = """
+"""
+test
 
 test
 """
@@ -91,11 +89,18 @@ test # "comment"
 
 test "string # not a comment" test
 
-test """multiline
+test = """multiline
 # not a comment
 string
-""" test
+"""
+test
 
 bug # "comment
 
-bug "'''" not a string
+test = "'''" bug
+'''
+
+x="""
+'''
+"""
+bug

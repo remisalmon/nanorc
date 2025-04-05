@@ -1,57 +1,68 @@
+# YAML directives.
 %YAML 1.2
+
+# Separators.
+text
 ---
-
+text
 ...
+text
 
-map: test
+# Core Schema.
+null text
+.nan text
+-1.0e+1 text
+-.inf text
+0o0 text
 
-map:
-  test
+# Scalars.
+"test" text
+"\"" text
+"\\" text
+"" text
 
-- map: test
+'test' text
+'\'' text
+'\\' text
+'' text
 
-- map:
-  test
+test: "test
+test"
 
-{map: test}
+test: "
+test
+"
 
-test: {map: test}
+test: "test
+\""
 
-test: {
-  map: test
-}
+test: "test
+\\"
 
-- {map: test}
+test: "
+"
 
-- list
+- test: "test
+test"
 
-- - list
+# Collections.
+test: text
+- test: text
 
-[list]
+- test
 
-[[list]]
+# Block scalars.
+test: |
+  text
 
-test:
-  - list
+# Comments.
+# Comments.
+# test
+# "test"
+# "test
 
-test: [list]
+text # test
+text # "test"
 
-test null test
-
-test "string" test
-
-test 'string' test
-
-test "test # not a comment" test
-
-# comment
-
-# "comment"
-
-test # comment
-
-test # "comment"
-
-test#not a comment
-
-bug # "comment
+# BUGS
+text # "bug

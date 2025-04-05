@@ -8,34 +8,43 @@ comment "# "
 
 tabgives "  "
 
-# Headers.
-color red "^%YAML 1\.[0-9]( |$)"
-
-# Separators.
-color blue "^---( |$)"
-color blue "^\.\.\.( |$)"
-
 # Core Schema.
+# https://yaml.org/spec/1.2.2/#103-core-schema
 color yellow "\<(null|Null|NULL|~|true|True|TRUE|false|False|FALSE)\>"
 color yellow "(\.nan|\.NaN|\.NAN)"
 color yellow "[+-]?([0-9]+|(\.[0-9]+|[0-9]+(\.[0-9]*)?)([eE][-+]?[0-9]+)?)"
 color yellow "[+-]?(\.inf|\.Inf|\.INF)"
 color yellow "(0o[0-7]+|0x[0-9a-fA-F]+)"
 
-# Strings.
+# Separators.
+# https://yaml.org/spec/1.2.2/#22-structures
+color blue "^---( |$)"
+color blue "^\.\.\.( |$)"
+
+# YAML directives.
+# https://yaml.org/spec/1.2.2/#681-yaml-directives
+color red "^%YAML 1\.[0-9]( |$)"
+
+# Scalars.
+# https://yaml.org/spec/1.2.2/#23-scalars
+# https://yaml.org/spec/1.2.2/#733-plain-style
 color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
 
-# Maps.
-color blue "^ *(- )*([^]@`,[{}"']+|"([^"\]|\\.)*"|'([^'\]|\\.)*'):( |$)"
+color green start="^ *(- )*([^]@`[{},"']+|"([^"\]|\\.)*"|'([^'\]|\\.)*'): *"([^"\]|\\.)*$" end="^([^"\]|\\.)*""
+color green start="^ *(- )*([^]@`[{},"']+|"([^"\]|\\.)*"|'([^'\]|\\.)*'): *'([^'\]|\\.)*$" end="^([^'\]|\\.)*'"
 
-# Lists.
+# Collections.
+# https://yaml.org/spec/1.2.2/#21-collections
+color blue "^ *(- )*([^]@`[{},"']+|"([^"\]|\\.)*"|'([^'\]|\\.)*'):( |$)"
 color blue "^ *(- )+"
 
-# Block Scalars.
+# Block scalars.
+# https://yaml.org/spec/1.2.2/#81-block-scalar-styles
 color magenta " [|>][+-]?[1-9]? *$"
 
 # Comments.
+# https://yaml.org/spec/1.2.2/#66-comments
 color red "^ *#.*$"
 color red "[ ]#("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 

@@ -1,40 +1,39 @@
-test = "test"
+# Literal Values.
+true text
 
-test {
+# Numeric literals.
+1.0e+1 text
 
-test "test" {
+# Arguments.
+test = text
 
-test "test" "test" {
+# Blocks.
+test {}
 
-1.0e+1
+test "test"
 
-true
+# STrings.
+"test" text
+"\"" text
+"\\" text
+"" text
 
+# Comments.
 # comment
-
 # "comment"
-
 # "comment
 
 // comment
 
+text # comment
+text # "comment"
 
-test # comment
+# Template Expressions.
+text <<EOF
+text
+EOF
 
-test # "comment"
-
-test // comment
-
-test /* comment */ test
-
-"/* not a comment" test
-
-test
+# Multiline Comments.
 /*
-multiline comment
-*/
 test
-
-bug # "comment
-
-bug "/* not a comment */"
+*/

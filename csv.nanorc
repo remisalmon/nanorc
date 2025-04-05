@@ -5,10 +5,12 @@ syntax csv "\.csv$"
 tabgives "	"
 
 # Comas.
+# https://datatracker.ietf.org/doc/html/rfc4180#section-2
 color magenta ","
 
 # Strings.
-color green ""([^"\]|\\.)*""
+# https://datatracker.ietf.org/doc/html/rfc4180#section-2
+color green ""([^"]|"")*""
 
 # Trailing whitespaces.
 color ,green " +$"
