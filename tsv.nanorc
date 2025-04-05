@@ -4,7 +4,8 @@ syntax tsv "\.tsv$"
 
 tabgives "	"
 
-# Comas.
+# Tabs.
+# https://www.iana.org/assignments/media-types/text/tab-separated-values
 color ,magenta "	"
 
 # Strings.
