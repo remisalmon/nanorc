@@ -62,12 +62,12 @@ color green "'[^']*'"
 
 # Multiline strings.
 # https://www.gnu.org/software/bash/manual/bash.html#index-name
-color green start="\<([A-Za-z_][0-9A-Za-z_]*=|echo( +-[neE]+)* +)"([^"\]|\\.)*\\?$" end="^([^"\]|\\.)*""
-color green start="\<([A-Za-z_][0-9A-Za-z_]*=|echo( +-[neE]+)* +)'[^']*$" end="^[^']*'"
+color green start="^ *([A-Za-z_][0-9A-Za-z_]*=|echo( +-[neE]+)* +)"([^"]|\\")*$" end="^([^"\]|\\.)*""
+color green start="^ *([A-Za-z_][0-9A-Za-z_]*=|echo( +-[neE]+)* +)'[^']*$" end="^[^']*'"
 
-color normal "\<([A-Za-z_][0-9A-Za-z_]*=|echo( +-[neE]+)* +)"
+color normal "^ *([A-Za-z_][0-9A-Za-z_]*=|echo( +-[neE]+)* +)"
 
-color magenta "\<echo\>"
+color magenta "^ *echo"
 
 # Comments.
 # https://www.gnu.org/software/bash/manual/bash.html#Comments
