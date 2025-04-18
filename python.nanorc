@@ -11,6 +11,7 @@ tabgives "    "
 # Keywords.
 # https://docs.python.org/3/reference/lexical_analysis.html#keywords
 color blue "\<(and|as|assert|async|await|break|class|continue|def|del|elif|else|except|finally|for|from|global|if|import|in|is|lambda|nonlocal|not|or|pass|raise|return|try|while|with|yield)\>"
+
 # https://docs.python.org/3/reference/lexical_analysis.html#soft-keywords
 color blue "\<(match|case|type|_)\>"
 
@@ -24,19 +25,23 @@ color yellow "\<(BaseException|BaseExceptionGroup|GeneratorExit|KeyboardInterrup
 color yellow "\<(ArithmeticError|FloatingPointError|OverflowError|ZeroDivisionError|AssertionError|AttributeError|BufferError|EOFError|ExceptionGroup|ImportError|ModuleNotFoundError|LookupError|IndexError|KeyError|MemoryError|NameError|UnboundLocalError|OSError|BlockingIOError|ChildProcessError|ConnectionError|BrokenPipeError|ConnectionAbortedError|ConnectionRefusedError|ConnectionResetError|FileExistsError|FileNotFoundError|InterruptedError|IsADirectoryError|NotADirectoryError|PermissionError|ProcessLookupError|TimeoutError|ReferenceError|RuntimeError|NotImplementedError|RecursionError|StopAsyncIteration|StopIteration|SyntaxError|IndentationError|TabError|SystemError|TypeError|ValueError|UnicodeError|UnicodeDecodeError|UnicodeEncodeError|UnicodeTranslateError)\>"
 color yellow "\<(Warning|BytesWarning|DeprecationWarning|EncodingWarning|FutureWarning|ImportWarning|PendingDeprecationWarning|ResourceWarning|RuntimeWarning|SyntaxWarning|UnicodeWarning|UserWarning)\>"
 
-# Built-in Functions.
-# https://docs.python.org/3/library/functions.html#built-in-funcs
-color magenta "\<(abs|aiter|all|anext|any|ascii|bin|bool|breakpoint|bytearray|bytes|callable|chr|classmethod|compile|complex|delattr|dict|dir|divmod|enumerate|eval|exec|filter|float|format|frozenset|getattr|globals|hasattr|hash|help|hex|id|input|int|isinstance|issubclass|iter|len|list|locals|map|max|memoryview|min|next|object|oct|open|ord|pow|print|property|range|repr|reversed|round|set|setattr|slice|sorted|staticmethod|str|sum|super|tuple|type|vars|zip|__import__)\("
-color normal "(\.[a-z_]+)?\("
-
 # Built-in Types.
 # https://docs.python.org/3/library/stdtypes.html#bltin-types
 color yellow "\<(bool|int|float|complex|list|tuple|range|str|bytes|bytearray|memoryview|set|frozenset|dict)\>"
+
+# Built-in Functions.
+# https://docs.python.org/3/library/functions.html#built-in-funcs
+color magenta "\<(abs|aiter|all|anext|any|ascii|bin|bool|breakpoint|bytearray|bytes|callable|chr|classmethod|compile|complex|delattr|dict|dir|divmod|enumerate|eval|exec|filter|float|format|frozenset|getattr|globals|hasattr|hash|help|hex|id|input|int|isinstance|issubclass|iter|len|list|locals|map|max|memoryview|min|next|object|oct|open|ord|pow|print|property|range|repr|reversed|round|set|setattr|slice|sorted|staticmethod|str|sum|super|tuple|type|vars|zip|__import__)\("
+
+color normal "(\.[a-z_]+)?\("
+
 # Functions and Classes.
 # https://docs.python.org/3/reference/compound_stmts.html#function-definitions
 # https://docs.python.org/3/reference/compound_stmts.html#class-definitions
 color magenta "\<(def|class) [A-Za-z_][0-9A-Za-z_]*"
-color blue "\<(def|class) "
+
+color blue "\<(def|class)\>"
+
 icolor magenta "^ *@[a-z_][0-9a-z_]*(\.[a-z_][0-9a-z_]*)*"
 
 # Numbers.
@@ -51,6 +56,7 @@ icolor green "r?[bf]?'([^'\]|\\.)*'"
 # Comments.
 # https://docs.python.org/3/reference/lexical_analysis.html#comments
 color red "^ *#.*$"
+
 color red "#("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 
 # Multiline strings.

@@ -84,7 +84,7 @@ text := `test
 test`
 text
 
-text := `
+text := `test
 test
 `
 text

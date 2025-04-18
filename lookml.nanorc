@@ -20,15 +20,15 @@ color red ";;"
 color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
 
+# Multiline strings.
+icolor green start="^ *([0-9a-z_]+ *: *)?"([^"\]|\\.)*$" end="^([^"\]|\\.)*""
+
+# Keywords.
+icolor blue "^ *(- +)?[0-9a-z_]+ *:"
+
 # Comments.
 color red "^ *#.*$"
 color red "#("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
-
-# Multiline strings.
-color green start="^ *([0-9a-z_]+ *: *)?"([^"\]|\\.)*$" end="^([^"\]|\\.)*""
-
-# Keywords.
-color blue "^ *(- +)?[0-9a-z_]+ *:"
 
 # Trailing whitespaces.
 color ,green " +$"

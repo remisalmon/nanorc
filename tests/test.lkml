@@ -4,7 +4,7 @@
 yes
 
 # Variables.
-${variable}
+${test}
 
 # SQL.
 text ;; text
@@ -20,21 +20,12 @@ text ;; text
 '\\'
 ''
 
-# Comments.
-# test
-# "test"
-# "test
-
-text # test
-text # "test"
-
 # Multiline strings.
 text: "test
 test"
 text
 
-test:
-"
+test: "
 test
 "
 text
@@ -47,10 +38,35 @@ test: "
 \\"
 text
 
+test: "
+"
+text
+
+"test
+test"
+text
+
+"
+test
+"
+text
+
+"
+"
+text
+
 # Keywords.
 test: text
 
   - test: text
 
+# Comments.
+# test
+# "test"
+# "test
+
+text # test
+text # "test"
+
 # BUGS
-bug # "comment
+bug # "test

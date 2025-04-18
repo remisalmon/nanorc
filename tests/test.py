@@ -46,8 +46,11 @@ text # test
 text # "test"
 
 # Multiline strings.
+"""test"""
+text
+
 """test
-"""
+test"""
 text
 
 """
@@ -56,6 +59,26 @@ test
 text
 
 """
+"""
+text
+
+"""
+\""""
+text
+
+"""
+\\"""
+text
+
+"""\
+"""
+text
+
+""""
+"""
+text
+
+"""""
 """
 text
 

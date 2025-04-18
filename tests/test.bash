@@ -49,36 +49,44 @@ $(( text ))
 ''
 
 # Multiline strings.
-echo -n "test
+echo "test
 test"
 text
 
-echo -n "
+echo "
 test
 "
 text
 
-echo -n "\
-test
+echo "
+"
+text
+
+echo "
 \""
 text
 
-echo -n "\
-test
+echo "
 \\"
 text
 
-echo -n 'test
+echo "\
+"
+
+echo 'test
 test'
 text
 
-echo -n '
+echo '
 test
 '
 text
 
-echo -n '\
-test
+echo '\
+'
+text
+
+echo '
 \'
 text
 

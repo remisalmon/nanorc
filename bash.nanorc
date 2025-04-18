@@ -61,10 +61,11 @@ color green ""([^"\]|\\.)*""
 color green "'[^']*'"
 
 # Multiline strings.
-color green start="\<([A-Za-z_][0-9A-Za-z_]*=|echo( +-[nsEe]+)*) +"([^"\]|\\.)*\\?$" end="^([^"\]|\\.)*""
-color green start="\<([A-Za-z_][0-9A-Za-z_]*=|echo( +-[nsEe]+)*) +'[^']*$" end="^[^']*'"
+# https://www.gnu.org/software/bash/manual/bash.html#index-name
+color green start="\<([A-Za-z_][0-9A-Za-z_]*=|echo( +-[neE]+)* +)"([^"\]|\\.)*\\?$" end="^([^"\]|\\.)*""
+color green start="\<([A-Za-z_][0-9A-Za-z_]*=|echo( +-[neE]+)* +)'[^']*$" end="^[^']*'"
 
-color normal "\<([A-Za-z_][0-9A-Za-z_]*=|echo( +-[nsEe]+)*) +"
+color normal "\<([A-Za-z_][0-9A-Za-z_]*=|echo( +-[neE]+)* +)"
 
 color magenta "\<echo\>"
 
@@ -74,5 +75,5 @@ color red "^ *#.*$"
 
 color red "[ ]#("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 
-# Trailing whilespaces.
+# Trailing whitespaces.
 color ,green " +$"
