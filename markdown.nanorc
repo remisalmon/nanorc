@@ -1,4 +1,4 @@
-# Syntax highlighting for Markdown.
+# Syntax highlighting for Markdown files.
 
 syntax markdown "\.md$"
 
@@ -7,34 +7,45 @@ comment "<!--|-->"
 tabgives "    "
 
 # Headers.
+# https://daringfireball.net/projects/markdown/syntax#header
 color blue "^#+ .+$"
-color blue "^(=+|-+)$"
+color blue "^[=-]+$"
+
+# Blockquotes.
+# https://daringfireball.net/projects/markdown/syntax#blockquote
+color yellow start="^ *>" end="^ *$"
 
 # Lists.
+# https://daringfireball.net/projects/markdown/syntax#list
 color blue "^ *[*+-] "
 color blue "^ *[0-9]+\. "
 
-# Horizontal Rules
-color blue "^((\* ?){3,}|(- ?){3,})$"
+# Code Blocks.
+# https://daringfireball.net/projects/markdown/syntax#precode
+color yellow "^ {4,}.*$"
+
+color yellow start="^ *```" end="``` *$"
+
+# Horizontal Rules.
+# https://daringfireball.net/projects/markdown/syntax#hr
+color blue "^([*-] ?){3,} *$"
 
 # Links and Images.
+# https://daringfireball.net/projects/markdown/syntax#link
+# https://daringfireball.net/projects/markdown/syntax#img
 color magenta "!?\[[^]]+\]"
 
 # Emphasis.
+# https://daringfireball.net/projects/markdown/syntax#em
 color magenta "\*\*?[^*` ][^*`]*\*\*?"
 color magenta "__?[^_` ][^_`]*__?"
 
-# Blockquotes.
-color yellow start="^ *>" end="^ *$"
-
-# Code Blocks.
-color yellow "^ {4,}.*$"
-color yellow start="^ *```" end="``` *$"
-
 # Code.
+# https://daringfireball.net/projects/markdown/syntax#code
 color yellow "`[^`]+`"
 
 # HTML.
+# https://daringfireball.net/projects/markdown/syntax#html
 color yellow "<[^>]+>"
 
 # Comments.

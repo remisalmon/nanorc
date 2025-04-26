@@ -1,4 +1,4 @@
-# Syntax highlighting for Go.
+# Syntax highlighting for Go files.
 
 syntax go "\.go$"
 
@@ -18,7 +18,6 @@ color magenta "\<(int|int8|int16|int32|int64|rune|string)\>"
 color magenta "\<(uint|uint8|uint16|uint32|uint64|uintptr)\>"
 
 color yellow "\<(true|false|iota)\>"
-
 color yellow "\<(nil)\>"
 
 color magenta "\<(append|cap|clear|close|complex|copy|delete|imag|len|make|max|min|new|panic|print|println|real|recover)\>"
@@ -41,11 +40,6 @@ color yellow "'(\\[xuU]?[0-9A-Fa-f]{2,8}|\\[abfnrtv\']|[^\'])'"
 
 # String literals.
 # https://go.dev/ref/spec#String_literals
-color green ""([^"\]|\\.)*""
-
-color green "`[^`]*`"
-
-# Multiline strings.
 color green start="^("([^"\]|\\.)*"|`[^`]*`|[^"`])+[=+]\s*`[^`]*$" end="^[^`]*`"
 
 color normal "^("([^"\]|\\.)*"|`[^`]*`|[^"`])+[=+]\s*`"
@@ -55,7 +49,6 @@ color green "`"
 color blue "\<(const|var)\>"
 
 color green ""([^"\]|\\.)*""
-
 color green "`[^`]*`"
 
 color yellow "'`'"
@@ -63,7 +56,6 @@ color yellow "'`'"
 # Comments.
 # https://go.dev/ref/spec#Comments
 color red "^\s*//.*$"
-
 color red "//("([^"\]|\\.)*"|`[^`]*`|[^"`])*$"
 
 color red start="^\s*/\*" end="\*/\s*$"

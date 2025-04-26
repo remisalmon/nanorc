@@ -11,9 +11,7 @@ tabgives "  "
 # Builtin Commands.
 # https://www.gnu.org/software/bash/manual/bash.html#Builtin-Index
 color magenta "\. "
-
 color magenta ":( |$)"
-
 color magenta "(\[ | \])"
 
 color magenta "\<(alias|bg|bind|break|builtin|caller|cd|command|compgen|complete|compopt|continue|declare|dirs|disown|echo|enable|eval|exec|exit|export|fc|fg|getopts|hash|help|history|jobs|kill|let|local|logout|mapfile|popd|printf|pushd|pwd|read|readarray|readonly|return|set|shift|shopt|source|suspend|test|times|trap|type|typeset|ulimit|umask|unalias|unset|wait)\>"
@@ -42,12 +40,11 @@ color blue "~"
 
 # https://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-Expansion
 icolor yellow "\$[a-z_][0-9a-z_]*"
+
 color yellow "\$\{[^}]+\}"
 
 # https://www.gnu.org/software/bash/manual/bash.html#Command-Substitution
-color blue "(\$\(|\))"
-
-color blue "`"
+color blue "(\$\(|\)|`)"
 
 # https://www.gnu.org/software/bash/manual/bash.html#Arithmetic-Expansion
 color blue "(\$\(\( | \)\))"
@@ -57,7 +54,6 @@ color blue "(<\(|>\(|\))"
 
 # Strings.
 color green ""([^"\]|\\.)*""
-
 color green "'[^']*'"
 
 # Multiline strings.
@@ -72,7 +68,6 @@ color magenta "^ *echo"
 # Comments.
 # https://www.gnu.org/software/bash/manual/bash.html#Comments
 color red "^ *#.*$"
-
 color red "[ ]#("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 
 # Trailing whitespaces.

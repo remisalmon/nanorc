@@ -20,9 +20,9 @@ abs.test()
 bool
 
 # Functions and Classes.
-def test()
+abs()
 
-class test:
+test.abs()
 
 @test
 

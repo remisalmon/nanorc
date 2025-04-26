@@ -1,45 +1,46 @@
-# header
+<!-- Headers. -->
+# test
 
-## header
+text
+====
 
-header
-======
+text
+----
 
-header
-------
+<!-- Blockquotes. -->
+> test
+test
 
+text
+
+<!-- Lists. -->
 * list
-  + list
-    - list
-      1. list
 
+1. list
+
+<!-- Code Blocks. -->
+    test
+text
+
+<!-- Horizontal Rules. -->
 ***
----
-* * *
+
 - - -
 
-test [link](link)
-test ![image](image)
+<!-- Links and Images. -->
+[test](text)
 
-test *emphasis* test
-test **emphasis** test
-test _emphasis_ test
-test __emphasis__ test
+<!-- Emphasis. -->
+*emphasis*
 
-> blockquote
-blockquote
+__emphasis__
 
-test
-    code block
+<!-- Code. -->
+`code`
 
-test
-```
-code block
-```
-test
+<!-- HTML. -->
 
-test `code` test
+<html>text</html>
 
-test <html></html> test
-
-<!--comment-->
+<!-- Comment. -->
+<!--test-->

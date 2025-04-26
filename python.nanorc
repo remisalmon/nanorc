@@ -1,4 +1,4 @@
-# Syntax highlighting for Python.
+# Syntax highlighting for Python files.
 
 syntax python "\.py$"
 
@@ -28,19 +28,11 @@ color yellow "\<(Warning|BytesWarning|DeprecationWarning|EncodingWarning|FutureW
 # Built-in Types.
 # https://docs.python.org/3/library/stdtypes.html#bltin-types
 color yellow "\<(bool|int|float|complex|list|tuple|range|str|bytes|bytearray|memoryview|set|frozenset|dict)\>"
-
 # Built-in Functions.
 # https://docs.python.org/3/library/functions.html#built-in-funcs
 color magenta "\<(abs|aiter|all|anext|any|ascii|bin|bool|breakpoint|bytearray|bytes|callable|chr|classmethod|compile|complex|delattr|dict|dir|divmod|enumerate|eval|exec|filter|float|format|frozenset|getattr|globals|hasattr|hash|help|hex|id|input|int|isinstance|issubclass|iter|len|list|locals|map|max|memoryview|min|next|object|oct|open|ord|pow|print|property|range|repr|reversed|round|set|setattr|slice|sorted|staticmethod|str|sum|super|tuple|type|vars|zip|__import__)\("
 
 color normal "(\.[a-z_]+)?\("
-
-# Functions and Classes.
-# https://docs.python.org/3/reference/compound_stmts.html#function-definitions
-# https://docs.python.org/3/reference/compound_stmts.html#class-definitions
-color magenta "\<(def|class) [A-Za-z_][0-9A-Za-z_]*"
-
-color blue "\<(def|class)\>"
 
 icolor magenta "^ *@[a-z_][0-9a-z_]*(\.[a-z_][0-9a-z_]*)*"
 
@@ -56,7 +48,6 @@ icolor green "r?[bf]?'([^'\]|\\.)*'"
 # Comments.
 # https://docs.python.org/3/reference/lexical_analysis.html#comments
 color red "^ *#.*$"
-
 color red "#("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 
 # Multiline strings.

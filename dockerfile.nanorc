@@ -16,7 +16,7 @@ icolor blue " AS "
 # https://docs.docker.com/reference/dockerfile/#environment-replacement
 icolor yellow "\$[0-9a-z_]+"
 
-icolor yellow "\$\{[^}]+}"
+color yellow "\$\{[^}]+}"
 
 # Strings.
 color green ""([^"\]|\\.)*""

@@ -1,4 +1,4 @@
-# Syntax highlighting for XML.
+# Syntax highlighting for XML files.
 
 syntax yaml "\.xml$"
 
@@ -11,6 +11,7 @@ tabgives "    "
 # Tags.
 # https://www.w3.org/TR/REC-xml/#sec-starttags
 color blue "(<[^> ]+|/?>)"
+
 color normal "[</>]"
 
 # Attributes.

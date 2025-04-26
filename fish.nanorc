@@ -58,7 +58,6 @@ color magenta "^ *(set|echo)"
 # Comments.
 # https://fishshell.com/docs/current/language.html#comments
 color red "^ *#.*$"
-
 color red "[ ]#("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 
 # Trailing whitespaces.

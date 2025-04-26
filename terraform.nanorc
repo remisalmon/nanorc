@@ -21,6 +21,7 @@ icolor magenta "^ *[a-z_-][0-9a-z_-]* *="
 # Blocks.
 # https://developer.hashicorp.com/terraform/language/syntax/configuration#blocks
 icolor blue "^ *[a-z_-][0-9a-z_-]* *["{]"
+
 color normal "[={]"
 
 # Strings.
@@ -33,7 +34,7 @@ color red "(#|//)("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
 
 # Template Expressions.
 # https://github.com/hashicorp/hcl/blob/main/hclsyntax/spec.md#template-expressions
-color normal start="<<-?EO." end="EO."
+color normal start="<<-?EO. *$" end="^ *EO."
 
 # Multiline Comments.
 # https://developer.hashicorp.com/terraform/language/syntax/configuration#comments
