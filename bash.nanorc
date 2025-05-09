@@ -58,17 +58,20 @@ color green "'[^']*'"
 
 # Multiline strings.
 # https://www.gnu.org/software/bash/manual/bash.html#index-name
-color green start="^ *([A-Za-z_][0-9A-Za-z_]*=|echo( +-[neE]+)* +)"([^"]|\\")*$" end="^([^"\]|\\.)*""
-color green start="^ *([A-Za-z_][0-9A-Za-z_]*=|echo( +-[neE]+)* +)'[^']*$" end="^[^']*'"
+color green start="^ *((export +)?[A-Za-z_][0-9A-Za-z_]*=|echo +(-[neE]+ +)*)"([^"]|\\")*$" end="^([^"\]|\\.)*""
+color green start="^ *((export +)?[A-Za-z_][0-9A-Za-z_]*=|echo +(-[neE]+ +)*)'[^']*$" end="^[^']*'"
 
-color normal "^ *([A-Za-z_][0-9A-Za-z_]*=|echo( +-[neE]+)* +)"
+color normal "^ *((export +)?[A-Za-z_][0-9A-Za-z_]*=|echo +(-[neE]+ +)*)"
 
-color magenta "^ *echo"
+color magenta "^ *(export|echo)"
 
 # Comments.
 # https://www.gnu.org/software/bash/manual/bash.html#Comments
 color red "^ *#.*$"
 color red "[ ]#("([^"\]|\\.)*"|'([^'\]|\\.)*'|[^"'])*$"
+
+# Here Documents.
+color normal start="<<-?["']?E..["']? *$" end="^ *E.."
 
 # Trailing whitespaces.
 color ,green " +$"

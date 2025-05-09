@@ -18,28 +18,16 @@ color normal "\.fish"
 # https://fishshell.com/docs/current/commands.html#keywords
 color blue "\<(if|else|end|for|in|while|break|continue|function|return|begin|and|or|not|switch|case|command|builtin|time|exec)\>"
 
-# Sperating characters.
-# https://fishshell.com/docs/current/language.html#job-control
-color blue "[;<>&|]"
-
-# Parameter expansion.
-# https://fishshell.com/docs/current/language.html#parameter-expansion
-# https://fishshell.com/docs/current/language.html#expand-wildcard
-color blue "[*?]"
-
-# https://fishshell.com/docs/current/language.html#expand-command-substitution
-color blue "(\$?\(|\))"
-
-# https://fishshell.com/docs/current/language.html#expand-brace
-color blue "[{,}]"
-
-# https://fishshell.com/docs/current/language.html#expand-home
-color blue "~"
+# Special characters.
+# https://fishshell.com/docs/current/language.html#escaping-characters
+color blue "[]$\*?~#(){}[<>&|;"']"
+color normal "\\[]$\*?~#(){}[<>&|;"']"
 
 # https://fishshell.com/docs/current/language.html#expand-variable
 # https://fishshell.com/docs/current/language.html#shell-variables
-icolor yellow "\$[0-9a-z_]+"
-icolor yellow "\{\$[0-9a-z_]+\}"
+# https://fishshell.com/docs/current/language.html#dereferencing-variables
+icolor yellow "\$+[0-9a-z_]+"
+icolor yellow "\{\$+[0-9a-z_]+\}"
 
 # Strings.
 color green ""([^"\]|\\.)*""
@@ -48,10 +36,10 @@ color green "'([^'\]|\\.)*'"
 # Multiline strings.
 # https://fishshell.com/docs/current/language.html#shell-variables
 # https://fishshell.com/docs/current/cmds/echo.html
-color green start="^ *(set( +--?[ULa-z]+)* +[0-9A-Za-z_]+|echo( +-[nseE]+)*( +--)?) +"([^"]|\\")*$" end="^([^"\]|\\.)*""
-color green start="^ *(set( +--?[ULa-z]+)* +[0-9A-Za-z_]+|echo( +-[nseE]+)*( +--)?) +'([^']|\\')*$" end="^([^'\]|\\.)*'"
+color green start="^ *(set +(--?[ULa-z]+ +)*[0-9A-Za-z_]+ +|echo +(-[nseE]+ +)*(-- +)?)"([^"]|\\")*$" end="^([^"\]|\\.)*""
+color green start="^ *(set +(--?[ULa-z]+ +)*[0-9A-Za-z_]+ +|echo +(-[nseE]+ +)*(-- +)?)'([^']|\\')*$" end="^([^'\]|\\.)*'"
 
-color normal "^ *(set( +--?[ULa-z]+)* +[0-9A-Za-z_]+|echo( +-[nseE]+)*( +--)?) +"
+color normal "^ *(set +(--?[ULa-z]+ +)*[0-9A-Za-z_]+ +|echo +(-[nseE]+ +)*(-- +)?)"
 
 color magenta "^ *(set|echo)"
 
