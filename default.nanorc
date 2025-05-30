@@ -11,7 +11,7 @@ color green ""([^"\]|\\.)*""
 color green "'([^'\]|\\.)*'"
 
 # Ini.
-color blue "^\s*\[[^]]+\]"
+color blue "^\s*\[+[^]]+\]+"
 
 # Comments.
 color red "^\s*#.*$"

@@ -36,12 +36,12 @@ color green "'([^'\]|\\.)*'"
 # Multiline strings.
 # https://fishshell.com/docs/current/language.html#shell-variables
 # https://fishshell.com/docs/current/cmds/echo.html
-color green start="^ *(set +(--?[ULa-z]+ +)*[0-9A-Za-z_]+ +|echo +(-[nseE]+ +)*(-- +)?)"([^"]|\\")*$" end="^([^"\]|\\.)*""
-color green start="^ *(set +(--?[ULa-z]+ +)*[0-9A-Za-z_]+ +|echo +(-[nseE]+ +)*(-- +)?)'([^']|\\')*$" end="^([^'\]|\\.)*'"
+color green start="(^| )(set +(--?[ULa-z]+ +)*[0-9A-Za-z_]+ +|echo +(-[nseE]+ +)*(-- +)?)"([^"]|\\")*$" end="^([^"\]|\\.)*""
+color green start="(^| )(set +(--?[ULa-z]+ +)*[0-9A-Za-z_]+ +|echo +(-[nseE]+ +)*(-- +)?)'([^']|\\')*$" end="^([^'\]|\\.)*'"
 
-color normal "^ *(set +(--?[ULa-z]+ +)*[0-9A-Za-z_]+ +|echo +(-[nseE]+ +)*(-- +)?)"
+color normal "(^| )(set +(--?[ULa-z]+ +)*[0-9A-Za-z_]+ +|echo +(-[nseE]+ +)*(-- +)?)"
 
-color magenta "^ *(set|echo)"
+color magenta "\<(set|echo)\>"
 
 # Comments.
 # https://fishshell.com/docs/current/language.html#comments
